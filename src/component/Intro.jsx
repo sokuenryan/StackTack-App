@@ -4,8 +4,6 @@ import { Form } from "react-router-dom";
 // library
 import { UserPlusIcon } from "@heroicons/react/24/solid";
 
-// assets 
-import illustration from "../assets/illustration.jpg";
 
 const Intro = () => {
     return (
@@ -33,8 +31,6 @@ const Intro = () => {
                 </button>
             </Form>
            </div>
-           <img src={illustration} alt="Person with money" 
-           width={600} />
         </div>
     )
 }

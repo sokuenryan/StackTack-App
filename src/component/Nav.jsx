@@ -1,21 +1,21 @@
 // rrd imports
 import { Form, NavLink } from "react-router-dom";
 
+// logo image
+import logo from "../assets/logo.png";
+
 // library imports
 import { TrashIcon } from "@heroicons/react/16/solid";
-
-// assets
-import logomark from "../assets/logomark.svg";
 
 const Nav = ({ userName }) => {
     return (
         <nav>
             <NavLink 
-            to="/"
-            aria-label="Go to home"
+                to="/"
+                aria-label="Go to home"
             >
-                <img src={logomark} alt="" height={30} />
-                <span>HomeBudget</span>
+                <img src={ logo } height={35} />
+                <h3><span>Stack</span>Tack</h3>
             </NavLink>
             {
                 userName && (
@@ -31,9 +31,7 @@ const Nav = ({ userName }) => {
                     <button type="submit" className="btn btn--warning">
                         <span> Delete User</span>
                         <TrashIcon width={20} />
-
                     </button>
-
                 </Form>
             )
             }

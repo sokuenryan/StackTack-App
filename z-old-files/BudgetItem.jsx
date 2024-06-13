@@ -5,7 +5,7 @@ import { Form, Link } from "react-router-dom";
 import { BanknotesIcon } from "@heroicons/react/24/outline";
 
 // Helper functions
-import { calculateSpentByBudget, formatCurrency, formatPecentage } from "../helpers";
+import { calculateSpentByBudget, formatCurrency, formatPecentage } from "../src/helpers";
 import { TrashIcon } from "@heroicons/react/16/solid";
 
 const BudgetItem = ({ budget, showDelete = false }) => {

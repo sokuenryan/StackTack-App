@@ -5,8 +5,7 @@ import { redirect } from "react-router-dom";
 import { toast } from "react-toastify";
 
 // helpers
-import { deleteItem, getAllMatchingItems } from "../helpers";
-
+import { deleteItem, getAllMatchingItems } from "../src/helpers";
 
 
 export function deleteBudget({ params }) {

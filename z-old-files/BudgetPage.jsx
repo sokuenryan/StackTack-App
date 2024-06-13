@@ -63,9 +63,7 @@ export async function budgetAction({ request }) {
             throw new Error("There was a problem deleting your expense.");
         }
    }
-    
 }
-
 
 const BudgetPage = () => {
     const { budget, expenses } = useLoaderData();

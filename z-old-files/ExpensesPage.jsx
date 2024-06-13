@@ -5,10 +5,10 @@ import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
 
 // components
-import Table from "../component/Table";
+import Table from "./Table";
 
 // helpers
-import { deleteItem, fetchData } from "../helpers";
+import { deleteItem, fetchData } from "../src/helpers";
 
 
 // loader 

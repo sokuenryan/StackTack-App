@@ -1,0 +1,8 @@
+Last given action on 6/3/2024 
+I was looking to find out how to make my bills print out the bottom using similar code
+that I had used in the react-router-budget-app vs code file.  
+
+Last given action on 6/13/2024
+I was looking for a way to get the bill-content class to expapnd with the number of added bills 
+and eventually I wanted, after a certain number was submitted, to have it switch pages and or be printed to the Calendar on the next tab. 
+Still haven't yet decided if I am going to follow the UXUI wireframe in that regard yet. 
