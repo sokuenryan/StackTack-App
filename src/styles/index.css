@@ -7,14 +7,7 @@
   box-sizing: border-box;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
 
-svg {
-  pointer-events: none;
-}
 
 :root {
   /* fonts */
@@ -38,15 +31,8 @@ svg {
   /* utils */
   --space-xs: 8px;
   --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 32px;
-  --space-xl: 40px;
   --content-sm: 40ch;
-  --content: 60ch;
   --round-sm: 4px;
-  --round-md: 10px;
-  --round-lg: 25px;
-  --round-full: 100vmax;
 
   /* toast customizations */
   --toastify-color-success: hsl(var(--accent));

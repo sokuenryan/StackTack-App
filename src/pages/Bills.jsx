@@ -43,29 +43,28 @@ const Bills = () => {
       <Sidebar />
       <div className='bills-wrapper'>
         <div className='bills-content'>
-          <table className='bill-table'>
-            <tbody>
-              <tr>
-                <th>Bills Paid</th>
-                {/* your data for 'Bills Paid' here */}
-              </tr>
+          <tbody className='bill-table'>
+            <div className='bill-info'>
+              <th>Bills Paid</th>
+              <tr><p>25/50 Paid</p></tr>
+            </div>
 
-              <tr>
-                <th>Bills Left</th>
-                  {/* your data for 'Bills Left' goes here */}
-              </tr>
+            <div className='bill-info'>
+              <th>Bills Left</th>
+              <tr><p>25 Due</p></tr>
+            </div>
 
-              <tr>
-                <th>Percent Paid</th>
-                {/* Your data for 'Bills Left' goes here */}
-              </tr>
-            </tbody>
-          </table>
+            <div className='bill-info'>
+              <th>Progress Made</th>
+              <tr><p>50 Percent</p></tr>
+            </div>
+          </tbody>
 
           <div className='bill_tab_table'>
             <div className='tabs'>
               <div className='tab_btns'>
                 <button onClick={() => handleButtonClick('AddNewBills')}>Create New Bills</button>
+                <button onClick={() => handleButtonClick('BillList')}>Bill List</button>
                 <button onClick={() => handleButtonClick('Calendar')}>Calendar</button>
               </div>
 
@@ -77,7 +76,7 @@ const Bills = () => {
                 bills={bills}
               />
             )}
-            </div>
+              </div>
           </div>
         </div>
       </div>

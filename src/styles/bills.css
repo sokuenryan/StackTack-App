@@ -7,50 +7,50 @@
     border: 2px solid rgb(196, 191, 191);
     margin-left: 30px;
     height: 600px;
-    max-width: 100%;
 }
 
 .bills-content {
     display: flex;
     gap: 30px;
     padding-top: 10px;
-    height: auto;
-    width: 1300px;
+    width: 1027px;
 }
 
 /* bill table section */
 .bill-table {
-    width: 234px;
-    height: 300px;
-    border: 2px solid rgb(196, 191, 191);
-}
-
-.bill-table tbody {
+    border: 1px solid lightgray;
+    height: 355px;
     display: grid;
-    grid-gap: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
-.bill-table tr {
-    display: grid;
-    height: 50px;
+.bill-info {
+    width: 100%;
 }
 
-.bill-table th {
+.bill-info th {
     background-color: lightgray;
+    width: 200px;
+}
+
+.bill-info tr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
 }
 
 /* tab section */
 .bill_tab_table {
     border: 2px solid lightgray;
-    width: 1000px;
+    max-width: 800px;
     height: 400px;
-    position: relative;
-
+    margin-right: 30px;
 };
 
 .tabs {
     width: 100%;
-    height: auto;
 }
 
 .tab_btns {
@@ -66,41 +66,107 @@
 /* Add New Bill Section */
 .add-new-bills h1 {
     font-family: 'Roboto', sans-serif;
-    margin: 40px 45px 15px 45px;
+    margin: 25px 45px 15px 45px;
     font-size: 25px;
 }
 
-.add-new-bills input {
-    height: 30px;
-    margin-left: 40px;
-    width: 300px;
+.submission-data {
+    display: grid;
+    margin-right: 30px;
+    width: 700px;
 }
 
-.add-new-bills button {
-    height: 36px;
-    width: 70px;
+.submission-data button {
+    height: 40px;
+    width: 100px;
+    margin-left: 50px;
+}
+
+.submission-data input {
+    height: 45px;
+}
+
+.bill--name-amount {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 50px;
+    gap: 20px;
+}
+
+.bill-amount input {
+    display: grid;
+    width: 95px;
+    height: 45px;
+}
+
+.bill--week-datedue {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 50px;
+    gap: 20px;
+}
+
+.bill-week {
+    margin: 20px 0px 20px 0px;
+    display: grid;
+}
+
+.bill-week input {
+    width: 200px;
+    height: 45px;
+}
+
+.bill-date {
+    margin: 20px 0px 20px 0px;
+    display: grid;
+}
+
+.bill-date input {
+    width: 200px;
+    height: 45px;
 }
 
 /* bill list section */
-.bill-list {
+.recent-bills {
     height: auto;
     width: 100%;
 }
 
-.list-of-bills h1 {
-    font-family: 'Roboto', sans-serif;
-}
-
-.bill-list ul {
+.recent-bills ul {
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     width: 100%;
-    padding-left: 0px;
     margin: 0px;
 }
 
-.list-of-bills li {
+.recent-bills input {
+    height: 40px;
+    width: 170px;
+    font-size: 18px;
+    margin: 2px 0px 2px 0px;
+}
+
+.recent-bills select {
+    height: 40px;
+    width: 125px;
+    font-size: 18px;
+    margin: 2px 0px 2px 0px;
+}
+
+.recent-bills button {
+    width: 100px;
+    height: 40px;
+    margin: 2px 0px 2px 2px;
+}
+
+.recent-bills h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.recent-bills li {
     display: flex;
     background-color: lightgray;
     border: 1px solid lightslategray;
@@ -108,16 +174,29 @@
     list-style-type: none;
 }
 
-.list-of-bills span {
+.recent-bills--info-wrapper {
     display: flex;
     width: 100vw;
-    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.recent-bills--info-wrapper > .info-1 {
+    display: flex;
+}
+
+.recent-bills--info span {
+    font-weight: 600;
+}
+
+.recent-bills--btns {
+    display: flex;
+    gap: 5px;
     align-items: center;
 }
 
-.bill-list-btns {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 100vw;
+.recent-bills--btns button {
+    width: 80px;
+    font-size: 20px;
+    font-weight: bold;
 }

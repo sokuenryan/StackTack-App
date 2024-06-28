@@ -6,3 +6,15 @@ Last given action on 6/13/2024
 I was looking for a way to get the bill-content class to expapnd with the number of added bills 
 and eventually I wanted, after a certain number was submitted, to have it switch pages and or be printed to the Calendar on the next tab. 
 Still haven't yet decided if I am going to follow the UXUI wireframe in that regard yet. 
+
+Last given action on 6/14/2024 
+I am adding an dropdown menu for weeks 1 - 4 in replacement of dropdown 'categories' 
+
+Last given action on 6/27/2024
+I am restructuring the Recent Bills Menu to look a bit more neat when there is mass amount of data printed
+The next thing I am going to do is get a client side server up so that the data can save 
+itself and not be deleted when refreshed. 
+Hopefully soon I will be able to duplicate everything into the next 2 buttons: Investments
+and Credit. But before that I need to be able to have the table update itself and to
+be able to have the table do that, I need to have a Client side server be able to 
+run CRUD. 
