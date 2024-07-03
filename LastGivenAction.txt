@@ -17,4 +17,16 @@ itself and not be deleted when refreshed.
 Hopefully soon I will be able to duplicate everything into the next 2 buttons: Investments
 and Credit. But before that I need to be able to have the table update itself and to
 be able to have the table do that, I need to have a Client side server be able to 
-run CRUD. 
+run CRUD.
+
+Last given action 6/28/2024
+Had trouble getting the percentage to update on the other component, so I just included it in the same one. 
+I figured it would also be more time effiecient anyways and I figured the design was alreadya  bit different anyways
+with the "week" dropdown menu. 
+
+Last given action 7//1/2024
+I had just restructued the Create New Bills page, changed up the dimensions and the colors a bit
+It's now working beautifly. 
+I have just made it so that the fractions can be calculated successfuly out of total bills. 
+My next action I need to do is get it to print out a whole number under 'Bill Left'. 
+e

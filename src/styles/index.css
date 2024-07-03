@@ -7,8 +7,6 @@
   box-sizing: border-box;
 }
 
-
-
 :root {
   /* fonts */
   --fs-200: clamp(0.78rem, calc(0.71rem + 0.35vw), 0.96rem);

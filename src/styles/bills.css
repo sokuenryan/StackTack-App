@@ -3,35 +3,26 @@
     flex-direction: row;
 }
 
-.bills-wrapper {
-    border: 2px solid rgb(196, 191, 191);
-    margin-left: 30px;
-    height: 600px;
-}
-
 .bills-content {
-    display: flex;
-    gap: 30px;
-    padding-top: 10px;
-    width: 1027px;
+    margin-left: 30px;
+    width: 100%;
 }
 
 /* bill table section */
 .bill-table {
     border: 1px solid lightgray;
-    height: 355px;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    height: 333px;
 }
 
 .bill-info {
-    width: 100%;
+    height: 5px;
 }
 
 .bill-info th {
     background-color: lightgray;
-    width: 200px;
+    width: 190px;
+
 }
 
 .bill-info tr {
@@ -44,9 +35,9 @@
 /* tab section */
 .bill_tab_table {
     border: 2px solid lightgray;
-    max-width: 800px;
-    height: 400px;
-    margin-right: 30px;
+    max-width: 100%;
+    margin-right: 180px;
+    height: 600px;
 };
 
 .tabs {
@@ -64,47 +55,80 @@
 }
 
 /* Add New Bill Section */
+.add-new-bills-wrapper {
+    display: grid;
+}
+
+.add-new-bills--create {
+    display: flex;
+}
+
+.add-new-bills {
+    width: 20px;
+}
+
 .add-new-bills h1 {
     font-family: 'Roboto', sans-serif;
     margin: 25px 45px 15px 45px;
-    font-size: 25px;
+    font-size: 40px;
+    width: 250px;
 }
 
 .submission-data {
     display: grid;
     margin-right: 30px;
-    width: 700px;
 }
 
 .submission-data button {
-    height: 40px;
-    width: 100px;
+    height: 50px;
+    width: 120px;
     margin-left: 50px;
+    border-radius: 8;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.submission-data button:hover {
+    background-color: hsl(var(--accent));
+    color: white;
+    border: 4px solid darkgray;
 }
 
 .submission-data input {
-    height: 45px;
+    height: 60px;
+    width: 500px;
 }
 
 .bill--name-amount {
     display: flex;
+    width: 100%;
     justify-content: left;
     align-items: center;
     margin-left: 50px;
     gap: 20px;
 }
 
+.bill-name label {
+    font-size: 30px;
+    color:  hsl(var(--accent))
+}
+
+.bill-amount label {
+    font-size:  30px ;
+    color:  hsl(var(--accent));
+}
+
 .bill-amount input {
     display: grid;
-    width: 95px;
-    height: 45px;
+    width: 105px;
+    height: 60px;
 }
 
 .bill--week-datedue {
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-left: 50px;
+    margin: 20px 0px 15px 50px;
     gap: 20px;
 }
 
@@ -113,9 +137,15 @@
     display: grid;
 }
 
-.bill-week input {
-    width: 200px;
-    height: 45px;
+.bill-week label {
+    font-size: 30px;
+    color: hsl(var(--accent));
+}
+
+.bill-week select {
+    height: 60px;
+    width: 222px;
+    margin-right: 50px;
 }
 
 .bill-date {
@@ -123,80 +153,141 @@
     display: grid;
 }
 
+.bill-date label {
+    font-size: 30px;
+    color: hsl(var(--accent));
+}
+
 .bill-date input {
     width: 200px;
-    height: 45px;
+    height: 60px;
 }
 
-/* bill list section */
-.recent-bills {
-    height: auto;
-    width: 100%;
+/* Bill List section */
+.bill-list h1 {
+    font-size: 40px;
+    margin: 40px 0px 15px 30px;
 }
 
-.recent-bills ul {
+.bill-list ul {
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
+}
+
+.bill-list li {
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    border: 1px solid lightslategray;
+    padding-left: 10px;
+    list-style-type: none;
+    height: 66px;
+}
+
+.bill-list-info {
+    display: flex;
     width: 100%;
-    margin: 0px;
+    height: 50px;
+    align-items: center;
 }
 
-.recent-bills input {
+.bill-list--name-amount {
+    display: flex;
+    width: 100%;
+}
+
+.bill-list--week-datedue {
+    display: flex;
+    width: 444px;
+    justify-content: right;
+    margin-right: 10px;
+}
+
+.bill-list-modifiers {
+    display: flex;
+    justify-content: right;
+    width: 248px;
+    align-items: center;
+}
+
+.bill-list--checkbox {
+    display: flex;
+    align-items: center;
     height: 40px;
-    width: 170px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.bill-list--checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .bill-list--checkbox input[type="checkbox"]:checked {
+    background-color: hsl(var(--accent));
+    border-color: hsl(var(--accent));
+  }
+
+  .bill-list--checkbox input[type="checkbox"]:checked::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 9px;
+    width: 18px;
+    height: 35px;
+    border: solid white;
+    border-width: 0 10px 10px 0;
+    transform: rotate(45deg);
+  }
+
+.bill-list--btns {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 50px;
+    gap: 4px;
+}
+
+.bill-list--name {
+    width: 300px;
+    height: 40px;
+}
+
+.bill-list--amount {
+    width: 130px;
+    height: 40px;
+}
+
+.bill-list select {
+    height: 40px;
+    width: 210px;
     font-size: 18px;
     margin: 2px 0px 2px 0px;
 }
 
-.recent-bills select {
+.bill-list--date {
+    width: 210px;
     height: 40px;
-    width: 125px;
-    font-size: 18px;
-    margin: 2px 0px 2px 0px;
 }
 
-.recent-bills button {
-    width: 100px;
+.bill-list button {
+    width: 70px;
     height: 40px;
     margin: 2px 0px 2px 2px;
 }
 
-.recent-bills h1 {
-    font-family: 'Roboto', sans-serif;
+.bill-list button:hover {
+    color: black;
+    border: 3px solid hsl(var(--accent));
+    transition: 600ms;
 }
 
-.recent-bills li {
-    display: flex;
-    background-color: lightgray;
-    border: 1px solid lightslategray;
-    padding-left: 40px;
-    list-style-type: none;
-}
 
-.recent-bills--info-wrapper {
-    display: flex;
-    width: 100vw;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.recent-bills--info-wrapper > .info-1 {
-    display: flex;
-}
-
-.recent-bills--info span {
-    font-weight: 600;
-}
-
-.recent-bills--btns {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-}
-
-.recent-bills--btns button {
-    width: 80px;
-    font-size: 20px;
-    font-weight: bold;
-}

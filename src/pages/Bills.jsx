@@ -41,25 +41,7 @@ const Bills = () => {
   return (
     <div className='bills setup'>
       <Sidebar />
-      <div className='bills-wrapper'>
-        <div className='bills-content'>
-          <tbody className='bill-table'>
-            <div className='bill-info'>
-              <th>Bills Paid</th>
-              <tr><p>25/50 Paid</p></tr>
-            </div>
-
-            <div className='bill-info'>
-              <th>Bills Left</th>
-              <tr><p>25 Due</p></tr>
-            </div>
-
-            <div className='bill-info'>
-              <th>Progress Made</th>
-              <tr><p>50 Percent</p></tr>
-            </div>
-          </tbody>
-
+      <div className='bills-content'>
           <div className='bill_tab_table'>
             <div className='tabs'>
               <div className='tab_btns'>
@@ -78,7 +60,6 @@ const Bills = () => {
             )}
               </div>
           </div>
-        </div>
       </div>
     </div>
   );
