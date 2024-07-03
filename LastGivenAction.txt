@@ -39,3 +39,9 @@ bills are printed out in the Bill List section to show up on the next tab in the
 designated dates given. 
 Hopefully after I can duplicate most of this code into the Investments and Credit area
 and then the whole project is completed! 
+
+Last given action 7/3/2024
+I had a slight issue last night with git push due to changing the repo name.
+It was saying something about not having some things saved locally and this
+being due to the fact that there were more than one repo being pushed by the same 
+ref. I had to do a git pull before doing a git push and then it worked. 
