@@ -50,8 +50,10 @@
 }
 
 .tab_btns button {
-    height: 30px;
+    height: 40px;
     width: 100%;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 /* Add New Bill Section */

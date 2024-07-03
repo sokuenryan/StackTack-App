@@ -29,4 +29,13 @@ I had just restructued the Create New Bills page, changed up the dimensions and 
 It's now working beautifly. 
 I have just made it so that the fractions can be calculated successfuly out of total bills. 
 My next action I need to do is get it to print out a whole number under 'Bill Left'. 
-e
+
+
+Last given action 7/2/2024
+I completed the Create New Bills tab area of the Bills Section. 
+I am now working on the Calendar Tab. I successfully added the react-calendar to
+the application and styled it. The next thing I need to work on is getting whatever
+bills are printed out in the Bill List section to show up on the next tab in the 
+designated dates given. 
+Hopefully after I can duplicate most of this code into the Investments and Credit area
+and then the whole project is completed! 

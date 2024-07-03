@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 // components
 import Sidebar from '../component/Sidebar';
 import AddNewBills from '../component/AddNewBills';
+import Calendar from 'react-calendar';
 
 const Bills = () => {
   const [ActiveComponent, setActiveComponent] = useState('AddNewBills');
@@ -42,15 +43,14 @@ const Bills = () => {
     <div className='bills setup'>
       <Sidebar />
       <div className='bills-content'>
-          <div className='bill_tab_table'>
-            <div className='tabs'>
-              <div className='tab_btns'>
+        <div className='bill_tab_table'>
+          <div className='tabs'>
+            <div className='tab_btns'>
                 <button onClick={() => handleButtonClick('AddNewBills')}>Create New Bills</button>
-                <button onClick={() => handleButtonClick('BillList')}>Bill List</button>
                 <button onClick={() => handleButtonClick('Calendar')}>Calendar</button>
-              </div>
+            </div>
 
-              {ActiveComponent === 'AddNewBills' && (
+            {ActiveComponent === 'AddNewBills' && (
               <AddNewBills
                 onBillSubmit={handleBillSubmit}
                 onBillDelete={handleBillDelete}
@@ -58,8 +58,11 @@ const Bills = () => {
                 bills={bills}
               />
             )}
-              </div>
+            {ActiveComponent === 'Calendar' && (
+              <Calendar />
+            )}
           </div>
+        </div>
       </div>
     </div>
   );
