@@ -1,10 +1,7 @@
-// react imports
 import React, { useState, useEffect } from 'react';
-
-// components
 import Sidebar from '../component/Sidebar';
 import AddNewBills from '../component/AddNewBills';
-import Calendar from 'react-calendar';
+import Calendar from '../component/Calendar';
 
 const Bills = () => {
   const [ActiveComponent, setActiveComponent] = useState('AddNewBills');
@@ -13,7 +10,7 @@ const Bills = () => {
   };
 
   const [bills, setBills] = useState([]);
-  
+
   useEffect(() => {
     const savedBills = JSON.parse(localStorage.getItem('bills')) || [];
     setBills(savedBills);
@@ -46,20 +43,18 @@ const Bills = () => {
         <div className='bill_tab_table'>
           <div className='tabs'>
             <div className='tab_btns'>
-                <button onClick={() => handleButtonClick('AddNewBills')}>Create New Bills</button>
-                <button onClick={() => handleButtonClick('Calendar')}>Calendar</button>
+              <button onClick={() => handleButtonClick('AddNewBills')}>Create New Bills</button>
+              <button onClick={() => handleButtonClick('Calendar')}>Calendar</button>
             </div>
 
             {ActiveComponent === 'AddNewBills' && (
               <AddNewBills
                 onBillSubmit={handleBillSubmit}
-                onBillDelete={handleBillDelete}
-                onBillEdit={handleBillEdit}
-                bills={bills}
+                billsList={bills}
               />
             )}
             {ActiveComponent === 'Calendar' && (
-              <Calendar />
+              <Calendar bills={bills} />
             )}
           </div>
         </div>

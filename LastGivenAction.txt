@@ -45,3 +45,9 @@ I had a slight issue last night with git push due to changing the repo name.
 It was saying something about not having some things saved locally and this
 being due to the fact that there were more than one repo being pushed by the same 
 ref. I had to do a git pull before doing a git push and then it worked. 
+
+Last given action 7/4/2024
+A bit of screwing things. I need to do more styling since I edited it a lot mostly 
+with the bill list area. 
+Calendar does print out to it, but does not update when deleting or editing. 
+SAVE THIS TO YOUR REPO ASAP! 

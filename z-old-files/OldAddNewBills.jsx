@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import BillInfo from './BillInfo';
 
-const AddNewBills = (onBillSubmit) => {
+const AddNewBills = ({ onBillSubmit }) => {
   const [newBillName, setNewBillName] = useState('');
   const [newBillDate, setNewBillDate] = useState('');
   const [newBillAmount, setNewBillAmount] = useState('');
@@ -28,11 +29,11 @@ const AddNewBills = (onBillSubmit) => {
         paid: false,
       };
       setBillsList([...billsList, newBill]);
-      onBillSubmit(newBill);
       setNewBillName('');
       setNewBillDate('');
       setNewBillAmount('');
       setSelectedWeek('');
+      onBillSubmit(newBill);
     }
   };
 
@@ -109,12 +110,12 @@ const AddNewBills = (onBillSubmit) => {
               <div className="bill-name">
                 <label htmlFor='billName'>Bill Name</label>
                 <input
-                type="text"
-                placeholder="Enter Bill Name"
-                maxLength={25}
-                value={newBillName}
-                onChange={(e) => setNewBillName(e.target.value)}
-                required
+                  type="text"
+                  placeholder="Enter Bill Name"
+                  maxLength={25}
+                  value={newBillName}
+                  onChange={(e) => setNewBillName(e.target.value)}
+                  required
                 />
               </div>
               <div className="bill-amount">
@@ -145,7 +146,7 @@ const AddNewBills = (onBillSubmit) => {
               </div>
 
               <div className="bill-date">
-              <label htmlFor='billDate'>Bill Date</label>
+                <label htmlFor='billDate'>Bill Date</label>
                 <input
                   type="date"
                   max='9999-12-31'
@@ -162,8 +163,8 @@ const AddNewBills = (onBillSubmit) => {
       </div>
 
       <div className="bill-list">
-          <h1>Bill List</h1>
-          <ul>
+        <h1>Bill List</h1>
+        <ul>
           {billsList.map((bill, index) => (
             <li key={index}>
               {editIndex === index ? (
@@ -191,55 +192,52 @@ const AddNewBills = (onBillSubmit) => {
                     value={editBillDate}
                     onChange={(e) => setEditBillDate(e.target.value)}
                   />
-                    <select 
-                      className='bill-list--week-select'
-                      id="weekSelect" 
-                      value={selectedWeek} 
-                      onChange={(e) => setSelectedWeek(e.target.value)} 
-                      required
-                    >
-                      <option value="">Select a week</option>
-                      <option value="Week 1">Week 1</option>
-                      <option value="Week 2">Week 2</option>
-                      <option value="Week 3">Week 3</option>
-                      <option value="Week 4">Week 4</option>
-                    </select>
-                    <button className='save-btn' onClick={() => handleEditBill(index, editBillName, editBillDate, editBillAmount)}>
-                      Save
-                    </button>
-                    <button className='cancel-btn' onClick={() => setEditIndex(null)}>Cancel</button>
+                  <select 
+                    className='bill-list--week-select'
+                    id="weekSelect"
+                    value={selectedWeek}
+                    onChange={(e) => setSelectedWeek(e.target.value)}
+                  >
+                    <option value="Week 1">Week 1</option>
+                    <option value="Week 2">Week 2</option>
+                    <option value="Week 3">Week 3</option>
+                    <option value="Week 4">Week 4</option>
+                  </select>
+                  <button onClick={() => handleEditBill(index, editBillName, editBillDate, editBillAmount)}>
+                    Save
+                  </button>
+                  <button onClick={() => setEditIndex(null)}>Cancel</button>
                 </>
               ) : (
                 <>
-                  <div className='bill-list-info'>
-                    <span className='bill-list--name-amount'>
-                      {bill.name}: ${bill.amount}
-                    </span>
-                   
-                    <span className='bill-list--week-datedue'>
-                      {bill.week} - {dateDue(bill.date)}
-                    </span>
-                  </div>
-                  
-                  <div className='bill-list-modifiers'>
-                    <div className='bill-list--checkbox'>
-                      <input
-                        type="checkbox"
-                        checked={bill.paid}
-                        onChange={() => togglePaid(index)}
-                      />
-                    </div>
-                  
-                    <div className="bill-list--btns">
-                      <button className='edit-btn' onClick={() => setEditIndex(index)}>Edit</button>
-                      <button className='delete-btn' onClick={() => handleDeleteBill(index)}>Delete</button>
-                    </div>
-                  </div>
+                  <BillInfo
+                    name={bill.name}
+                    amount={bill.amount}
+                    week={bill.week}
+                    dateDue={dateDue(bill.date)}
+                    showFullInfo={true}
+                  />
+                  <button onClick={() => {
+                    setEditIndex(index);
+                    setEditBillName(bill.name);
+                    setEditBillDate(bill.date);
+                    setEditBillAmount(bill.amount);
+                  }}>Edit</button>
+                  <button onClick={() => handleDeleteBill(index)}>Delete</button>
+                  <label className="checkbox-label">
+                    Paid
+                    <input
+                      type="checkbox"
+                      checked={bill.paid}
+                      onChange={() => togglePaid(index)}
+                    />
+                    <span className="checkbox-custom"></span>
+                  </label>
                 </>
               )}
             </li>
           ))}
-          </ul>
+        </ul>
       </div>
     </div>
   );
