@@ -51,3 +51,50 @@ A bit of screwing things. I need to do more styling since I edited it a lot most
 with the bill list area. 
 Calendar does print out to it, but does not update when deleting or editing. 
 SAVE THIS TO YOUR REPO ASAP! 
+
+Last given action 07/05/2024
+After much frustration I finally figured out how to make the react-calendar work. 
+The first issue I had was it was not printing to the calendar at all. 
+
+Then I did get it to print to the calendar, but it didn't change when I edited 
+or deleted the data. 
+
+I tried to edit the handleEdit and the handleDelete added several different
+lines of code, went through several copy and pastings from github to reset, 
+used AI features to debug, and deleted several conversation when it got to messy
+and even the AI was more lost in what it was saying than I did. 
+Also, AI is programmed to act like it knows what it's talking about, and after
+several conversations it kept asking me to check and double check different parts of my
+code to make sure it was working properly which it should've been but it wasn't. 
+
+The height of frustration came when I had two key value pairs. I had to check in on 
+key value pairs, data storage, passing props, and state lifting, and all this other 
+stuff and eventually I decided to turn the data section into it's own component 
+to be passed in to the react-calendar itself. 
+
+The idea that AI had was that I would update the key value billsList and then it would
+update it when it passed it to the parent component. But the issue was that the second
+key value pair bills only was a copy of the data sent to it when submitted and the edit
+and delete features and the checkmark feature didn't affect it at all which means 
+that all the data was only being active in the billList key value area.
+
+So I tried to edit the handleEdit and handleDelete, ran into filter problems, and 
+naming structures, and all sorts of other issues I had to debug which was like going
+on 30 million different tangents just to try to arrive back at the original issue. 
+
+finally I had the bright idea to fetch the data from the Calendar.jsx file 
+instead of passing it to it. That way it didn't have to deal with any issues, there
+were no need for any extra key value pairs to pass data from, I didn't have to pass
+anything to the parent component from the child component and from the parent 
+component back down again to the other child component. This way was much more effiecient
+so whatever changes made to the key value pair of the already exising data, 
+the react-calendar could have the same. 
+
+LESSON LEARNED: sometimes it's better to FETCH data than PASS DATA. Somethimes your
+components need to be independant and not dependant on other components to get data. 
+Make the child components independant of other child and the parent component as 
+it make data functions WAYYYYY easier to work with and decreases the chance of fix
+anything at all. 
+Components are like one big family, they need to sometimes to be independant but at the 
+same time they need to be co-existant and work with other data components at the same time. 
+
