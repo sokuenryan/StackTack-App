@@ -1,0 +1,126 @@
+/* List section */
+.list-items h1 {
+    font-size: 40px;
+    margin: 40px 0px 15px 30px;
+}
+
+.list-items ul {
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.list-items li {
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    border: 1px solid lightslategray;
+    padding-left: 10px;
+    list-style-type: none;
+    height: 66px;
+}
+
+.list-items-info {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+}
+
+.list-items--name-amount {
+    display: flex;
+    width: 100%;
+}
+
+.list-items--week-datedue {
+    display: flex;
+    width: 444px;
+    justify-content: right;
+    margin-right: 10px;
+}
+
+.list-items-modifiers {
+    display: flex;
+    justify-content: right;
+    width: 248px;
+    align-items: center;
+}
+
+.list-items--checkbox {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.list-items--checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .list-items--checkbox input[type="checkbox"]:checked {
+    background-color: hsl(var(--accent));
+    border-color: hsl(var(--accent));
+  }
+
+  .list-items--checkbox input[type="checkbox"]:checked::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 9px;
+    width: 18px;
+    height: 35px;
+    border: solid white;
+    border-width: 0 10px 10px 0;
+    transform: rotate(45deg);
+  }
+
+.list-items--btns {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 50px;
+    gap: 4px;
+}
+
+.list-items--name {
+    width: 300px;
+    height: 40px;
+}
+
+.list-items--amount {
+    width: 130px;
+    height: 40px;
+}
+
+.list-items select {
+    height: 40px;
+    width: 210px;
+    font-size: 18px;
+    margin: 2px 0px 2px 0px;
+}
+
+.list-items--date {
+    width: 210px;
+    height: 40px;
+}
+
+.list-items button {
+    width: 70px;
+    height: 40px;
+    margin: 2px 0px 2px 2px;
+}
+
+.list-items button:hover {
+    color: black;
+    border: 3px solid hsl(var(--accent));
+    transition: 600ms;
+}

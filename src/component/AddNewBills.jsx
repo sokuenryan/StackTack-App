@@ -36,12 +36,6 @@ const AddNewBills = (onBillSubmit) => {
     }
   };
 
-  const dateDue = (date) => {
-    const [year, month, day] = date.split('-');
-    const yearFormatter = year.length === 4 ? year : year.slice(0, 4);
-    return `${month}/${day}/${yearFormatter}`;
-  };
-
   const handleEditBill = (index, newName, newDate, newAmount) => {
     const updatedBills = [...billsList];
     updatedBills[index] = {
@@ -82,21 +76,27 @@ const AddNewBills = (onBillSubmit) => {
     return totalBills > 0 ? ((paidBills.length / totalBills) * 100).toFixed(2) : 0.00;
   };
 
+  const dateDue = (date) => {
+    const [year, month, day] = date.split('-');
+    const yearFormatter = year.length === 4 ? year : year.slice(0, 4);
+    return `${month}/${day}/${yearFormatter}`;
+  };
+
   return (
     <div className="add-new-bills-wrapper">
       <div className="add-new-bills--create">
-        <tbody className='bill-table'>
-          <div className='bill-info'>
+        <tbody className='info-table'>
+          <div className='info'>
             <th>Bills Paid</th>
             <tr>{calculatePaidFraction()}</tr>
           </div>
 
-          <div className='bill-info'>
+          <div className='info'>
             <th>Bills Left</th>
             <tr><p>{billsList.length - countPaidBills()}</p></tr>
           </div>
 
-          <div className='bill-info'>
+          <div className='info'>
             <th>Progress Made</th>
             <tr>{calculatePaidPercentage()}%</tr>
           </div>
@@ -105,8 +105,8 @@ const AddNewBills = (onBillSubmit) => {
         <div className='add-new-bills'>
           <h1>Add New Bill</h1>
           <div className="submission-data">
-            <div className="bill--name-amount">
-              <div className="bill-name">
+            <div className="submit--name-amount">
+              <div className="submit-name">
                 <label htmlFor='billName'>Bill Name</label>
                 <input
                 type="text"
@@ -117,7 +117,7 @@ const AddNewBills = (onBillSubmit) => {
                 required
                 />
               </div>
-              <div className="bill-amount">
+              <div className="submit-amount">
                 <label htmlFor='billAmount'>Amount</label>
                 <input
                   type="number"
@@ -132,8 +132,8 @@ const AddNewBills = (onBillSubmit) => {
               </div>
             </div>
 
-            <div className="bill--week-datedue">
-              <div className="bill-week">
+            <div className="submit--week-datedue">
+              <div className="submit-week">
                 <label htmlFor='billWeek'>Week of Bill</label>
                 <select value={selectedWeek} onChange={(e) => setSelectedWeek(e.target.value)}>
                   <option value="">Select Week</option>
@@ -144,8 +144,8 @@ const AddNewBills = (onBillSubmit) => {
                 </select>
               </div>
 
-              <div className="bill-date">
-              <label htmlFor='billDate'>Bill Date</label>
+              <div className="submit-datedue">
+                <label htmlFor='billDate'>Bill Date</label>
                 <input
                   type="date"
                   max='9999-12-31'
@@ -155,28 +155,27 @@ const AddNewBills = (onBillSubmit) => {
                 />
               </div>
             </div>
-
             <button onClick={handleAddNewBill}>Add Bill</button>
           </div>
         </div>
       </div>
 
-      <div className="bill-list">
+      <div className="list-items">
           <h1>Bill List</h1>
           <ul>
-          {billsList.map((bill, index) => (
+            {billsList.map((bill, index) => (
             <li key={index}>
               {editIndex === index ? (
                 <>
                   <input
-                    className='bill-list--name'
+                    className='list-items--name'
                     placeholder='New Bill Name'
                     type="text"
                     value={editBillName}
                     onChange={(e) => setEditBillName(e.target.value)}
                   />
                   <input
-                    className='bill-list--amount'
+                    className='list-items--amount'
                     type="number"
                     step="0.01"
                     placeholder="$0.00"
@@ -186,13 +185,13 @@ const AddNewBills = (onBillSubmit) => {
                     required
                   />
                   <input
-                    className='bill-list--date'
+                    className='list-items--date'
                     type="date"
                     value={editBillDate}
                     onChange={(e) => setEditBillDate(e.target.value)}
                   />
                     <select 
-                      className='bill-list--week-select'
+                      className='list-items--week-select'
                       id="weekSelect" 
                       value={selectedWeek} 
                       onChange={(e) => setSelectedWeek(e.target.value)} 
@@ -211,18 +210,18 @@ const AddNewBills = (onBillSubmit) => {
                 </>
               ) : (
                 <>
-                  <div className='bill-list-info'>
-                    <span className='bill-list--name-amount'>
+                  <div className='list-items-info'>
+                    <span className='list-items--name-amount'>
                       {bill.name}: ${bill.amount}
                     </span>
                    
-                    <span className='bill-list--week-datedue'>
+                    <span className='list-items--week-datedue'>
                       {bill.week} - {dateDue(bill.date)}
                     </span>
                   </div>
                   
-                  <div className='bill-list-modifiers'>
-                    <div className='bill-list--checkbox'>
+                  <div className='list-items-modifiers'>
+                    <div className='list-items--checkbox'>
                       <input
                         type="checkbox"
                         checked={bill.paid}
@@ -230,7 +229,7 @@ const AddNewBills = (onBillSubmit) => {
                       />
                     </div>
                   
-                    <div className="bill-list--btns">
+                    <div className="list-items--btns">
                       <button className='edit-btn' onClick={() => setEditIndex(index)}>Edit</button>
                       <button className='delete-btn' onClick={() => handleDeleteBill(index)}>Delete</button>
                     </div>
@@ -238,7 +237,7 @@ const AddNewBills = (onBillSubmit) => {
                 </>
               )}
             </li>
-          ))}
+            ))}
           </ul>
       </div>
     </div>

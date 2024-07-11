@@ -40,9 +40,9 @@ const Bills = () => {
     <div className='bills setup'>
       <Sidebar />
       <div className='bills-content'>
-        <div className='bill_tab_table'>
+        <div className='tab-table'>
           <div className='tabs'>
-            <div className='tab_btns'>
+            <div className='tab-btns'>
               <button onClick={() => handleButtonClick('AddNewBills')}>Create New Bills</button>
               <button onClick={() => handleButtonClick('Calendar')}>Calendar</button>
             </div>
@@ -50,6 +50,8 @@ const Bills = () => {
             {ActiveComponent === 'AddNewBills' && (
               <AddNewBills
                 onBillSubmit={handleBillSubmit}
+                onBillEdit={handleBillEdit}
+                onBillDelete={handleBillDelete}
                 billsList={bills}
               />
             )}

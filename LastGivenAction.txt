@@ -98,3 +98,24 @@ anything at all.
 Components are like one big family, they need to sometimes to be independant but at the 
 same time they need to be co-existant and work with other data components at the same time. 
 
+Last given action of 07/08/2024
+I had started on the new tab called "investment" but there were a lot of naming issues with the classnames. 
+I have duplicated most of the code from the Bills.jsx over to the investment portion of the application. 
+But it still needs some major fix ups. 
+I removed 3 major components: The week dropdown menu, the date input, and the child compoent Calendar 
+mainly associated with the parent component of Bills.jsx. 
+NOTE: I found out that when you change the name of "AddNewBills" found on line 48 of Investments.jsx in this 
+sequence of code:          
+
+    {ActiveComponent === 'AddNewBills' && (
+        <AddNewInvestments
+            onBillSubmit={handleBillSubmit}
+            billsList={bills}
+    />
+
+    it removes all featrues off the page in your localhost server. 
+
+    funny. Had a convo themed about character over labels today. Made up the time at home. 
+    Spend more time on your code today so you don't have to when you get home. 
+    You got this. Stay on track. You are not far to go. Beleive. Perservere. 
+     - past Zee. :) 
