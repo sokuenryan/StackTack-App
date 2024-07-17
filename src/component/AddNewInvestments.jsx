@@ -3,18 +3,22 @@ import React, { useEffect, useState } from 'react';
 const AddNewInvestments = () => {
     const [newInvestmentName, setNewInvestmentName] = useState('');
     const [newInvestmentAmount, setNewInvestmentAmount] = useState('');
+    
     const [investmentsList, setInvestmentsList] = useState(() => {
         const savedInvestments = localStorage.getItem('investmentsList');
         return savedInvestments ? JSON.parse(savedInvestments) : [];
     });
+
     const [editIndex, setEditIndex] = useState(null);
     const [editInvestmentName, setEditInvestmentName] = useState('');
     const [editInvestmentAmount, setEditInvestmentAmount] = useState('');
 
+    // Storage //
     useEffect(() => {
         localStorage.setItem('investmentsList', JSON.stringify(investmentsList));
     }, [investmentsList]);
 
+    // CRUD //
     const  handleAddNewInvestment = (onInvestmentSubmit) => {
         if (newInvestmentName && newInvestmentAmount) {
             const newInvestment = {
@@ -44,14 +48,16 @@ const AddNewInvestments = () => {
         const updatedInvestments = [...investmentsList];
         updatedInvestments.splice(index, 1);
         setInvestmentsList(updatedInvestments);
-    ;}
+    };
 
+    // checkbox //
     const togglePaid = (index) => {
         const updatedInvestments = [...investmentsList]
         updatedInvestments[index].paid = !updatedInvestments[index].paid;
         setInvestmentsList(updatedInvestments);
     };
 
+    // sidebar //
     const countPaidInvestments = () => {
         return investmentsList.filter(investment => investment.paid).length; 
     };
@@ -60,25 +66,25 @@ const AddNewInvestments = () => {
         const paidInvestmentsCount = investmentsList.filter(investment => investment.paid).length;
         const totalInvestmentCount = investmentsList.length;
             return `${paidInvestmentsCount}/${totalInvestmentCount}`;
-    }
+    };
 
     const calculatePaidPercentage = () => {
         const paidInvestments = investmentsList.filter(investment => investment.paid);
         const totalInvestments = investmentsList.length;
             return totalInvestments > 0 ? ((paidInvestments.length / totalInvestments) *100).toFixed(2) : 0.00;
-    }
+    };
 
   return (
     <div className='add-new-investments-wrapper'>
         <div className='add-new-investments--create'>
             <tbody className='info-table'>
                 <div className='info'>
-                    <th>Amount Paid</th>
+                    <th>Completed</th>
                     <tr>{calculatePaidFraction()}</tr>
                 </div>
 
                 <div className='info'>
-                    <th>Payments Left</th>
+                    <th>Pending</th>
                     <tr><p>{investmentsList.length - countPaidInvestments()}</p></tr>
                 </div>
 
@@ -94,7 +100,7 @@ const AddNewInvestments = () => {
                     <div className='submit--name-amount'>
                         <div className='submit-name'>
                             <label htmlFor='investmentName'>Investment Name</label>
-                            <input 
+                            <input
                                 type='text'
                                 placeholder='Enter Investment Name'
                                 maxLength={25}
@@ -107,7 +113,9 @@ const AddNewInvestments = () => {
                             <label htmlFor='investmentAmount'>Amount</label>
                             <input
                                 type='number'
-                                step="0.01"
+                                step='0.01'
+                                min='0'
+                                max='999'
                                 inputMode='decimal'
                                 name='investmentAmount'
                                 placeholder='0.00'
@@ -118,19 +126,19 @@ const AddNewInvestments = () => {
                         </div>
                     </div>
                     <button 
-                    onClick={handleAddNewInvestment}
-                    style={{marginTop: '30px'}}>
-                        Add Investment
+                        onClick={handleAddNewInvestment}
+                        style={{marginTop: '30px'}}>
+                            Add Investment
                     </button>
                 </div>
             </div>
         </div>
             
         <div className='list-items'>
-                <h1>Investment List</h1>
-                <ul>
-                    {investmentsList.map((investments, index) =>(
-                       <li key={index}>
+            <h1>Investment List</h1>
+            <ul>
+                {investmentsList.map((investments, index) =>(
+                    <li key={index}>
                         {editIndex === index ? (
                             <>
                                 <input
@@ -153,7 +161,7 @@ const AddNewInvestments = () => {
                                 <button className='save-btn' onClick={() => handleEditInvestment(index, editInvestmentName, editInvestmentAmount)}>
                                     Save
                                 </button>
-                                <button className='cancel-btn' oncClick={() => setEditIndex(null)}>
+                                <button className='cancel-btn' onClick={() => setEditIndex(null)}>
                                     Cancel
                                 </button>
                             </>
@@ -181,9 +189,9 @@ const AddNewInvestments = () => {
                                 </div>
                             </>
                         )}
-                       </li> 
-                    ))}
-                </ul>
+                    </li> 
+                ))}
+            </ul>
         </div>
     </div>
   );

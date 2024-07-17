@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from '../component/Sidebar';
 import AddNewInvestments from '../component/AddNewInvestments';
+import ExistingInvestments from '../component/ExistingInvestments';
 
 const Investments = () => {
-  const [ActiveComponent, setActiveComponent] = useState('AddNewInvestments');
+  const [ActiveComponent, setActiveComponent] = useState('AddNewInvestments', 'ExistingInvestments');
   const handleButtonClick = (componentName) => {
     setActiveComponent(componentName);
   };
@@ -42,7 +43,8 @@ const Investments = () => {
         <div className='tab-table'>
           <div className='tabs'>
             <div className="tab-btns">
-              <button>Create New Investment</button>
+              <button onClick={() => handleButtonClick('AddNewInvestments')}>Create New Investment</button>
+              <button onClick={() => handleButtonClick('ExistingInvestments')}>Existing Investments</button>
             </div>
             
             {ActiveComponent === 'AddNewInvestments' && (
@@ -52,6 +54,9 @@ const Investments = () => {
                 onInvestmentDelete={handleInvestmentDelete}
                 investmentsList={investments}
               />
+            )}
+            {ActiveComponent === 'ExistingInvestments' && (
+              <ExistingInvestments investments={investments} />
             )}
           </div>
         </div>

@@ -1,121 +1,234 @@
 Last given action on 6/3/2024 
-I was looking to find out how to make my bills print out the bottom using similar code
-that I had used in the react-router-budget-app vs code file.  
+    - working on making the bills print out the bottom using similar code that I had
+     used in the react-router-budget-app VScode file.  
 
 Last given action on 6/13/2024
-I was looking for a way to get the bill-content class to expapnd with the number of added bills 
-and eventually I wanted, after a certain number was submitted, to have it switch pages and or be printed to the Calendar on the next tab. 
-Still haven't yet decided if I am going to follow the UXUI wireframe in that regard yet. 
+    - Working on a way to get the bill-content class to expapnd with 
+    the number of added bills. 
+    - Considered making it so that after a certain number of bills were submitted,
+    it would switch pages. Wanted the data to also be printed to the Calendar on the
+    next tab. 
+    - Still haven't yet decided if I am going to follow the UXUI wireframe in that 
+    regard yet. 
 
 Last given action on 6/14/2024 
-I am adding an dropdown menu for weeks 1 - 4 in replacement of dropdown 'categories' 
+    - I am adding an dropdown menu for weeks 1 - 4 in replacement of dropdown 
+    'categories' 
 
 Last given action on 6/27/2024
-I am restructuring the Recent Bills Menu to look a bit more neat when there is mass amount of data printed
-The next thing I am going to do is get a client side server up so that the data can save 
-itself and not be deleted when refreshed. 
-Hopefully soon I will be able to duplicate everything into the next 2 buttons: Investments
-and Credit. But before that I need to be able to have the table update itself and to
-be able to have the table do that, I need to have a Client side server be able to 
-run CRUD.
+    - Currrently restructuring the Recent Bills Menu to look a bit more neat when 
+    there is mass amount of data printed. 
+    - Need to get a client side server up so that the data can save itself and not be 
+    deleted when refreshed. 
+
+    - Hopefully soon I will be able to duplicate everything into the next 2 buttons: 
+    Investments and Credit. But before that I need to be able to have the table 
+    update itself and to be able to have the table do that, I need to have a Client 
+    side server be able to run CRUD.
 
 Last given action 6/28/2024
-Had trouble getting the percentage to update on the other component, so I just included it in the same one. 
-I figured it would also be more time effiecient anyways and I figured the design was alreadya  bit different anyways
-with the "week" dropdown menu. 
+    - Had trouble getting the percentage to update on the other component, so I just 
+    included it in the same one. 
+    - Figured it would also be more time effiecient 
+    anyways and I figured the design was already a bit different anyways with the
+    "week" dropdown menu. 
 
 Last given action 7//1/2024
-I had just restructued the Create New Bills page, changed up the dimensions and the colors a bit
-It's now working beautifly. 
-I have just made it so that the fractions can be calculated successfuly out of total bills. 
-My next action I need to do is get it to print out a whole number under 'Bill Left'. 
+    - I had just restructued the Create New Bills page, changed up the dimensions and 
+    the colors a bit. It's now working beautifly. 
+    - I have just made it so that the fractions can be calculated successfuly out of 
+    total bills. 
+    - My next action I need to do is get it to print out a whole number under 
+    'Bill Left'. 
 
 
 Last given action 7/2/2024
-I completed the Create New Bills tab area of the Bills Section. 
-I am now working on the Calendar Tab. I successfully added the react-calendar to
-the application and styled it. The next thing I need to work on is getting whatever
-bills are printed out in the Bill List section to show up on the next tab in the 
-designated dates given. 
-Hopefully after I can duplicate most of this code into the Investments and Credit area
-and then the whole project is completed! 
+    - I completed the Create New Bills tab area of the Bills Section. 
+    - Currently working on the Calendar Tab.
+    - successfully added the react-calendar to the application and styled it. 
+    The next thing I need to work on is getting whatever bills are printed out in the 
+    "Bill List" section to show up on the next tab in the designated dates given. 
+    - Hopefully after I can duplicate most of this code into the Investments and Credit 
+    area and then the whole project is completed! 
 
 Last given action 7/3/2024
-I had a slight issue last night with git push due to changing the repo name.
-It was saying something about not having some things saved locally and this
-being due to the fact that there were more than one repo being pushed by the same 
-ref. I had to do a git pull before doing a git push and then it worked. 
+    - I had a slight issue last night with git push due to changing the repo name.
+    - It was saying something about not having some things saved locally and this
+    being due to the fact that there were more than one repo being pushed by the same 
+    ref. 
+    - I had to do a git pull before doing a git push and then it worked. 
+
+LESSON:
+    - Don't change the repo name. It overcomplicates things. 
 
 Last given action 7/4/2024
-A bit of screwing things. I need to do more styling since I edited it a lot mostly 
-with the bill list area. 
-Calendar does print out to it, but does not update when deleting or editing. 
-SAVE THIS TO YOUR REPO ASAP! 
+    - A bit of screwing around with things. I need to do more styling since I edited
+     it a lot mostly with the bill list area. 
+    - Calendar does print out to it, but does not update when deleting or editing. 
+    - SAVE THIS TO YOUR REPO ASAP! 
 
 Last given action 07/05/2024
-After much frustration I finally figured out how to make the react-calendar work. 
-The first issue I had was it was not printing to the calendar at all. 
+    - Spent most the shift getting the react-calendar to work. 
+    - BUG 1: wasn't printing to the calendar 
 
-Then I did get it to print to the calendar, but it didn't change when I edited 
-or deleted the data. 
+    - BUG 2: When it did print to the calendar, it didn't change when I edited 
+    or deleted the data. 
+    - Tried to edit the handleEdit and the handleDelete added several different
+    lines of code
+    - Went through several copy and pastings from github to reset, 
+    - Turned to AI for help with debugging
+    - Ended up deleting several conversation when it got to messy and the AI I believe
+    was causing more issues.
 
-I tried to edit the handleEdit and the handleDelete added several different
-lines of code, went through several copy and pastings from github to reset, 
-used AI features to debug, and deleted several conversation when it got to messy
-and even the AI was more lost in what it was saying than I did. 
-Also, AI is programmed to act like it knows what it's talking about, and after
-several conversations it kept asking me to check and double check different parts of my
-code to make sure it was working properly which it should've been but it wasn't. 
+NOTE:
+    - AI is programmed to act like it knows what it's talking about, and after
+    several conversations it kept asking me to check and double check different parts 
+    of my code to make sure it was working properly which it should've been but it
+    wasn't. 
 
-The height of frustration came when I had two key value pairs. I had to check in on 
-key value pairs, data storage, passing props, and state lifting, and all this other 
-stuff and eventually I decided to turn the data section into it's own component 
-to be passed in to the react-calendar itself. 
-
-The idea that AI had was that I would update the key value billsList and then it would
-update it when it passed it to the parent component. But the issue was that the second
-key value pair bills only was a copy of the data sent to it when submitted and the edit
-and delete features and the checkmark feature didn't affect it at all which means 
-that all the data was only being active in the billList key value area.
-
-So I tried to edit the handleEdit and handleDelete, ran into filter problems, and 
-naming structures, and all sorts of other issues I had to debug which was like going
-on 30 million different tangents just to try to arrive back at the original issue. 
-
-finally I had the bright idea to fetch the data from the Calendar.jsx file 
-instead of passing it to it. That way it didn't have to deal with any issues, there
-were no need for any extra key value pairs to pass data from, I didn't have to pass
-anything to the parent component from the child component and from the parent 
-component back down again to the other child component. This way was much more effiecient
-so whatever changes made to the key value pair of the already exising data, 
-the react-calendar could have the same. 
-
-LESSON LEARNED: sometimes it's better to FETCH data than PASS DATA. Somethimes your
-components need to be independant and not dependant on other components to get data. 
-Make the child components independant of other child and the parent component as 
-it make data functions WAYYYYY easier to work with and decreases the chance of fix
-anything at all. 
-Components are like one big family, they need to sometimes to be independant but at the 
-same time they need to be co-existant and work with other data components at the same time. 
+LESSON: Sometimes it's better to FETCH data than PASS DATA. 
+    The first idea was to pass the data from one child component up to the parent 
+    component and then once updated in the parent component, pass it down to a
+    different child component.
+    
+    - Making the child components independant of other components seems to make data 
+    functionality WAYYYYY easier to work with. 
+    - It also decreases the chance of needing to fix anything at all. 
+    - Almost seems like a regular family. Componets need to be independant but also 
+    simultaneously co-existant with other components. Hyper-dependant components seem 
+    to make things very messy. 
 
 Last given action of 07/08/2024
-I had started on the new tab called "investment" but there were a lot of naming issues with the classnames. 
-I have duplicated most of the code from the Bills.jsx over to the investment portion of the application. 
-But it still needs some major fix ups. 
-I removed 3 major components: The week dropdown menu, the date input, and the child compoent Calendar 
-mainly associated with the parent component of Bills.jsx. 
-NOTE: I found out that when you change the name of "AddNewBills" found on line 48 of Investments.jsx in this 
-sequence of code:          
+    - Started on the new tab called "investment" but there were a lot of naming 
+    issues with the classnames. 
+    - Duplicated most of the code from the Bills.jsx over to the investment 
+    portion of the application, but it still needs some major fix ups. 
+    Removed 3 major components: The week dropdown-menu, the date input, and the 
+    child compoent Calendar mainly associated with the parent component of Bills.jsx. 
 
-    {ActiveComponent === 'AddNewBills' && (
-        <AddNewInvestments
-            onBillSubmit={handleBillSubmit}
-            billsList={bills}
-    />
+    Had a lengthy phone conversation and had to make up the time at home. 
+    Spend more time on your code today so you don't have later. 
+    Remember,you got this. Stay on track. You have not far to go. 
+    Believe and Perservere.
+        - past Zee. :)
 
-    it removes all featrues off the page in your localhost server. 
+Last given action 07/10/2024
+    - Calendar got screwed up on styling  at some point. 
+    - The several duplication attempts to take the code from the bills section
+    to the investments section seemed to create more issues.  
+    - The calendar styles were not being registered and the reason 
+    - The reason was I had imported the react-calendar/dist/Calendar.css file
+    from node_modules and it was overriding my styles. 
+    - But it was working fine before.
 
-    funny. Had a convo themed about character over labels today. Made up the time at home. 
-    Spend more time on your code today so you don't have to when you get home. 
-    You got this. Stay on track. You are not far to go. Beleive. Perservere. 
-     - past Zee. :) 
+Notes: 
+    - You have to input your own styles in first, and THEN you can import the 
+    node_modules after. I beleive that's why it worked before. 
+    - Copying and pasting seemed to keep making me mess up classNames in the code. 
+    - Deleting certain things in huge chunks isn't good as much of the code is linked
+     to other parts that make it function and this tends to create bugs quite quickly. 
+
+Lesson: 
+    - Slowly type out each line while looking at the code on a split screen 
+    and take it step by step and keep checking to make sure it's not breaking code. 
+    Remeber what they taught you: How would you eat an elephant? One bite at a time. 
+
+   - Organized areas of code I could duplicate making it way more manable. 
+   - This would have been great to do from the start. 
+   - But you need to do the UXUI wireframes first so you know where you can duplicate
+    certain classnames. 
+
+    - Finally have Investments set up, it's styled and works correctly. 
+
+    FUTURE NOTES: 
+    - Add a carousel to the main page with an image. 
+    - Maybe make a wireframe for that one. 
+    - Make the Welcome ______ larger. 
+
+    - May want to add some security to the page as well. 
+    - Even if you delete the account it's still is accessable if you type 
+    "localhost:5173/bills". 
+
+    - For the Investment page. 
+    - Add a feature that allows some sort of duplication so you can check off how 
+    many of the payments you made to pay it off
+    - Or make it so that you can input how much money you added to the investment 
+    so pay it off. 
+    - It could be a savings goal that goes into the investment area remember that. 
+    - You may want to design this first. As a dropdown menu could be helpful too. 
+    But those are restrictive to certain options only. 
+
+    The Credit page should follow something similar. 
+
+    DON'T OVER COMPLICATE THIS APP. 
+    Keep it simple. You got this. 
+    -- past Zee ^_^  
+
+Last given action of 07/11/2024
+ - created the Credit page. 
+
+
+
+Plans: 
+    - create a new tab in investments and credit for
+        - "existing investments" 
+        - "credit lines"
+
+    Have an a-tag link set up in your listed items sends you directly to the page of
+    the specific listed investment or credit line. 
+
+    Have the new tab list out all of them and have those listed items also have an a tag 
+    that lists all the other lists. 
+
+    When a list is clicked it brings removes all the data seen on that tab and shows 
+    the list, but it also has a back button that works exactly like the homepage. 
+
+New Plan: 
+Due to some discoveries made while coding I came up with the UI UX design for the Credit and Investment
+tabs. 
+
+--ADDING MAIN DATA--
+BOTH the credit and investment "Create New ____" are going to remain the same. 
+You will add the name and the amount. 
+
+--PRINTING OUT TO THE NEXT PAGE--
+The "Existing _____" tab next to it will FETCH the data just like the Calendar component is Bills.jsx 
+and display it just the same as it is with the same styles as in the "Create New ____" tab. 
+Every time you edit the name or the amount it will update as it pulls the data directly from the local storage. 
+
+--CONTRIBUTING--
+You will hit the Contribution button and add a number that stores itself in the local storage and it will
+start at 0.00 and add whatever you put in there. 
+Once the new data is stored, The contribution button will keep acting as an addition button to the data stored. 
+
+--EDITING & DELETING--
+Editing button will edit the data stored even if it's at the default of 0.00. It only will link to that, 
+and not the incrementing button. 
+
+The delete feature will not be available on the "Existing ___" tabs but it will be available on the 
+"Create New ______" 
+
+When you do hit delete tho it will delete everything including the data created on "Existing ___" in the 
+incrementor. 
+
+--MATCHING THE DATA--
+When the data from "Existing ___" and "Create New _____" matcH:
+ a toastify message will pop up saying
+"Congrats! Progress Complete!" or whatever you choose. 
+
+Optional: it will set the "paid" checkmark to "true", but it still will be able to be toggled. 
+Checklists incite the dopamine response so maybe this is not a good idea and counter intuitive. 
+
+This way everything can stay on one line, use multiple tabs for space and clean UI and better UX. 
+
+Then you can move onto adding security, the carousel feature and the last few touch ups. 
+-------------------------------------------------------------------------------
+After the above is set up the last two things are to set up 
+    - Add some security features 
+            - add a sign-in page
+            - add a create account page 
+
+    - Re-decorate the home page by
+            - adding a carousel feature
+            - enlarging the "welcome" savings
+            - adding an image 
