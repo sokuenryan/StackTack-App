@@ -127,3 +127,9 @@ Last Given action of 07/16/2024
     user on reaching their investent marker.
     - Has and edit button that can update the amount if by accident you put in
     the wrong contribution amount. 
+    - updated the AddNewInvestment page so that when you hit delete it also
+    deletes the data that was also made in contributions. 
+    - This way when you create a new investment and then click on the the 
+    "existing investments" tab it won't auto show the old data of the last 
+    contribution amount since before it wasn't attached to that component that
+    created the list in the first place. 
