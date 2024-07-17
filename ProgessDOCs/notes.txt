@@ -1,0 +1,13 @@
+NOTE:
+   - AI is programmed to act like it knows what it's talking about, and 
+   after several conversations it kept asking me to check and double check 
+   different parts of my code to make sure it was working properly which it 
+   should've been but it wasn't. 
+
+NOTE: 
+   - You have to input your own styles in first, and THEN you can import 
+   the node_modules after. I beleive that's why it worked before. 
+   - Copying and pasting seemed to keep making me mess up classNames in the 
+   code. 
+   - Deleting certain things in huge chunks isn't good as much of the code is 
+   linked to other parts that make it function and this tends to create bugs quite quickly. 
