@@ -102,10 +102,8 @@ const ExistingInvestments = () => {
     const newInvestmentsList = investmentsList.map((investment, i) => {
       if (i === index) {
         if (investment.showContributionInput) {
-          // If in contribute mode, hide the input and reset temporary changes
           return { ...investment, showContributionInput: false, inputValue: '', notification: null };
         } else if (investment.editMode) {
-          // If in edit mode, revert changes made in the input and exit edit mode
           return { ...investment, editMode: false, inputValue: investment.contribution.toFixed(2), notification: null };
         }
       }
@@ -136,6 +134,7 @@ const ExistingInvestments = () => {
                 <strong> Amount:</strong> ${investment.amount}/
               </div>
             </div>
+
             <div className='contribution'>
               ${investment.contribution.toFixed(2)}
               {!investment.showContributionInput && !investment.editMode ? (

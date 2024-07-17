@@ -15,9 +15,8 @@ const ExistingCredit = () => {
       <ul>
         {creditsList.map((credit, index) => (
           <li key={index}>
-            <strong>Name:</strong> {credit.name}, 
-            <strong> Amount:</strong> {credit.amount}, 
-            <strong> Completed:</strong> {credit.paid ? 'Yes' : 'No'}
+            <strong>Name:</strong> {credit.name}
+            <strong> Amount:</strong> {credit.amount}
           </li>
         ))}
       </ul>
