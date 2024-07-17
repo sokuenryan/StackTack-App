@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Banner from './Banner';
 
 const ExistingInvestments = () => {
@@ -8,17 +10,22 @@ const ExistingInvestments = () => {
   useEffect(() => {
     const storedInvestments = localStorage.getItem('investmentsList');
     if (storedInvestments) {
-      setInvestmentsList(JSON.parse(storedInvestments).map(investment => ({
-        ...investment,
-        showContributionInput: false,
-        editMode: false,
-        inputValue: '',
-        contribution: 0.00,
-        notification: null,
-      })));
+      const parsedInvestments = JSON.parse(storedInvestments).map(investment => {
+        const storedContribution = localStorage.getItem(`contribution-${investment.name}`);
+        return {
+          ...investment,
+          showContributionInput: false,
+          editMode: false,
+          inputValue: '',
+          contribution: storedContribution ? parseFloat(storedContribution) : 0.00,
+          notification: null,
+        };
+      });
+      setInvestmentsList(parsedInvestments);
     }
   }, []);
 
+  
   const handleContributeClick = (index) => {
     const newInvestmentsList = investmentsList.map((investment, i) => 
       i === index ? { ...investment, showContributionInput: true, editMode: false, notification: null } : investment
@@ -33,9 +40,14 @@ const ExistingInvestments = () => {
         if (newContribution + investment.contribution > investment.amount) {
           return { ...investment, notification: 'Your contribution amount exceeds the current investment amount.' };
         } else {
+          const updatedContribution = investment.contribution + newContribution;
+          localStorage.setItem(`contribution-${investment.name}`, updatedContribution);
+          if (updatedContribution === investment.amount) {
+            toast.success('Congrats! You completed your investment!');
+          }
           return { 
             ...investment, 
-            contribution: investment.contribution + newContribution, 
+            contribution: updatedContribution, 
             showContributionInput: false, 
             inputValue: '', 
             notification: null 
@@ -68,6 +80,10 @@ const ExistingInvestments = () => {
         if (newContribution > investment.amount) {
           return { ...investment, notification: 'Your contribution amount exceeds the current investment amount.' };
         } else {
+          localStorage.setItem(`contribution-${investment.name}`, newContribution);
+          if (newContribution === investment.amount) {
+            toast.success('Congrats! You completed your investment!');
+          }
           return { 
             ...investment, 
             contribution: newContribution, 
@@ -75,6 +91,22 @@ const ExistingInvestments = () => {
             inputValue: '', 
             notification: null 
           };
+        }
+      }
+      return investment;
+    });
+    setInvestmentsList(newInvestmentsList);
+  };
+
+  const handleCancelClick = (index) => {
+    const newInvestmentsList = investmentsList.map((investment, i) => {
+      if (i === index) {
+        if (investment.showContributionInput) {
+          // If in contribute mode, hide the input and reset temporary changes
+          return { ...investment, showContributionInput: false, inputValue: '', notification: null };
+        } else if (investment.editMode) {
+          // If in edit mode, revert changes made in the input and exit edit mode
+          return { ...investment, editMode: false, inputValue: investment.contribution.toFixed(2), notification: null };
         }
       }
       return investment;
@@ -91,6 +123,7 @@ const ExistingInvestments = () => {
 
   return (
     <div className='existing-investments'>
+      <ToastContainer />
       <ul>
         {investmentsList.map((investment, index) => (
           <li key={index}>
@@ -124,9 +157,13 @@ const ExistingInvestments = () => {
                     value={investment.inputValue} 
                     onChange={(e) => handleInputChange(index, e.target.value)} 
                     placeholder='$0.00'
+                    required
                   />
                   <button className='contribute--add-btn' onClick={() => handleAddClick(index)}>
                     Add
+                  </button>
+                  <button className='cancel-btn' onClick={() => handleCancelClick(index)}>
+                    Cancel
                   </button>
                 </div>
               ) : investment.editMode && (
@@ -139,10 +176,14 @@ const ExistingInvestments = () => {
                     value={investment.inputValue} 
                     onChange={(e) => handleInputChange(index, e.target.value)} 
                     placeholder='$0.00'
+                    required
                   />
-                  <button className='edit--update-btn' onClick={() => handleUpdateClick(index)}>
-                    Update
-                  </button>
+                    <button className='edit--update-btn' onClick={() => handleUpdateClick(index)}>
+                      Update
+                    </button>
+                    <button className='cancel-btn' onClick={() => handleCancelClick(index)}>
+                      Cancel
+                    </button>
                 </div>
               )}
             </div>

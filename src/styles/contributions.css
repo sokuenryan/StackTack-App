@@ -3,18 +3,19 @@
     height: 45px;
     width: 100%;
     align-items: center;
-    justify-content: right;
 }
 
 .contribute-btns-wrapper {
+    display: flex;
+    justify-content: right;
     margin-left: 10px;
+    width: 100%;
 }
 
 .contribution button {
-    width: 111px;
+    width: 92px;
     height: 44px;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 17px;
     margin-right: 10px;
 }
 
@@ -23,13 +24,20 @@
     align-items: center;
     justify-content: right;
     width: 100%;
+    margin-left: 5px;
 }
 
 .contribution-amount input {
     width: 100px;
 }
 
-.contribution-amount button {
-    width: 70px;
-    height: 44px;
+.edit-contribution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.edit-contribution input {
+    width: 100px;
 }

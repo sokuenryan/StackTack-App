@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const AddNewBills = (onBillSubmit) => {
+const AddNewBills = () => {
   const [newBillName, setNewBillName] = useState('');
   const [newBillDate, setNewBillDate] = useState('');
   const [newBillAmount, setNewBillAmount] = useState('');
@@ -28,7 +28,6 @@ const AddNewBills = (onBillSubmit) => {
         paid: false,
       };
       setBillsList([...billsList, newBill]);
-      onBillSubmit(newBill);
       setNewBillName('');
       setNewBillDate('');
       setNewBillAmount('');

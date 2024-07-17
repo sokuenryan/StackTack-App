@@ -113,3 +113,17 @@ Last Given action of 07/16/2024
     Existing Credit and alt what is needed.
     - Added a banner so you can't add any contribution number that exeeds
     that of the current Investment
+
+    --Update-- 
+    - Finished the Existing Investments page. 
+    - Able to pull data from investmentsList so that whatever data get created
+    it can print out onto the next tab page.
+    - has a working contribution button that can add any number and print it 
+    out with a default of 0.00
+    - All the data created by the contribution button can also be saved to the
+    local storage. Just like the investmentList. 
+    - Has the ability to recognize when the contribution amount matches the 
+    investmentList amount and bring up a pop up message that congratulates the
+    user on reaching their investent marker.
+    - Has and edit button that can update the amount if by accident you put in
+    the wrong contribution amount. 

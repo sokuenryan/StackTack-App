@@ -19,7 +19,7 @@ const AddNewInvestments = () => {
     }, [investmentsList]);
 
     // CRUD //
-    const  handleAddNewInvestment = (onInvestmentSubmit) => {
+    const  handleAddNewInvestment = () => {
         if (newInvestmentName && newInvestmentAmount) {
             const newInvestment = {
                 name: newInvestmentName,
@@ -27,7 +27,6 @@ const AddNewInvestments = () => {
                 paid: false,
             };
             setInvestmentsList([...investmentsList, newInvestment]);
-            onInvestmentSubmit(newInvestment);
             setNewInvestmentName('');
             setNewInvestmentAmount('');
         }
@@ -45,10 +44,13 @@ const AddNewInvestments = () => {
     };
 
     const handleDeleteInvestment = (index) => {
+        const investmentToDelete = investmentsList[index];
+        localStorage.removeItem(`contribution-${investmentToDelete.name}`);
+        
         const updatedInvestments = [...investmentsList];
         updatedInvestments.splice(index, 1);
         setInvestmentsList(updatedInvestments);
-    };
+      };
 
     // checkbox //
     const togglePaid = (index) => {
