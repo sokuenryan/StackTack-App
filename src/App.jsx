@@ -1,26 +1,15 @@
-// rrd imports
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-
-// library imports
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// Layouts
 import Main, { mainLoader } from "./layouts/Main";
-
-// Actions
 import { logoutAction } from "./actions/Logout";
 
-// Routes
 import Dashboard, { dashboardAction, dashboardLoader } from "./pages/Dashboard";
 import Bills from "./pages/Bills";
 import Investments from "./pages/Investments";
 import Credit from "./pages/Credit";
 import Error from "./pages/Error";
-
 
 const router = createBrowserRouter([
   {

@@ -82,3 +82,5 @@ When Finished:
         - Delete any unused code from the CSS files
         or any other files that have unused or excess 
         code. 
+
+        - Remember to also make it mobile responsive!!!
