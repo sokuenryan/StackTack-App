@@ -43,7 +43,7 @@ const ExistingInvestments = () => {
           const updatedContribution = investment.contribution + newContribution;
           localStorage.setItem(`contribution-${investment.name}`, updatedContribution);
           if (updatedContribution === investment.amount) {
-            toast.success('Congrats! You completed your investment!');
+            toast.success('Congratulations!🎉🎉🎉 All Payments Complete!');
           }
           return { 
             ...investment, 
@@ -82,7 +82,7 @@ const ExistingInvestments = () => {
         } else {
           localStorage.setItem(`contribution-${investment.name}`, newContribution);
           if (newContribution === investment.amount) {
-            toast.success('Congrats! You completed your investment!');
+            toast.success('Congratulations!🎉🎉🎉 All Payments Complete!');
           }
           return { 
             ...investment, 

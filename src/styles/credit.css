@@ -33,10 +33,28 @@
 .existing-credits li {
     display: flex;
     align-items: center;
-    gap: 10px;
     list-style: none;
     background-color: lightgray;
     border: 1px solid lightslategray;
     padding-left: 10px;
     height: 66px;
+}
+
+.existing-credit--name-amount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 66px;
+    width: 100%;
+}
+
+.existing-credit-amount {
+    display: flex;
+    gap: 5px;
+}
+
+.existing-credit-name {
+    display: flex;
+    gap: 5px;
+    width: 415px;
 }

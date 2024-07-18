@@ -133,3 +133,42 @@ Last Given action of 07/16/2024
     "existing investments" tab it won't auto show the old data of the last 
     contribution amount since before it wasn't attached to that component that
     created the list in the first place. 
+
+Last given action 07/17/2024
+ - completed the Credit page. 
+ - has all the same functionality as the investments page. 
+ - styling and fuctionality mostly all the same as the investment page. 
+ - changed the classNames. 
+ - Credit page has the ability to create a new credit line name and establish
+ a specified debt number. 
+ - Credit page also has the ability to use CRUD complete with a checkmark 
+ toggle button to signify if it's paid or not. 
+ - Ability to edit the name and the amount
+ - Ability to delete the listed items
+ - Also able to be stored in the local storage. 
+ - has a secondary tab called Existing Credit lines
+ - Existing Credit tab fetches data from the creditsList key value pair in 
+ the local storage created by the Create New Credit Line tab. 
+ - Has the ability to name the name and amount 
+ - Has a contribution button with the ability to save the contribution amount 
+ to the local storage. 
+ - Has the ability to edit the amount and change it in the local storage
+
+--additonal fixes--
+    - Made it so that when you delete the data from the listed items created
+    in the Create New Credit Line tab it also deletes all corrisponding 
+    contribution data created in the Existing Credit Lines tab. 
+
+    - Corrected the credit page so that it was able to clear the input logs
+    after submitting the Credit line entry.
+
+    - Had an issue with the AddNewBill where the week wasn't updating 
+    when using the edit button. 
+    - Bug was fixed so now it can. There was no issue when creating the bill.
+    
+    - Fixed the banner message in the Credit page, due to the fact it said 
+    "Your current contribution exceeds your current investment amount"
+    - Altered the toastify message to include an celebration emoji
+    - Altered the text on the "table" feature on the Credit page so now it says 
+    "Completed", "Active", and "Progress" instead of 
+    "Amount Paid" "Amount Left", and "Progress"

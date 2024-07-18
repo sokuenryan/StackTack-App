@@ -86,7 +86,7 @@ const AddNewInvestments = () => {
                 </div>
 
                 <div className='info'>
-                    <th>Pending</th>
+                    <th>Active</th>
                     <tr><p>{investmentsList.length - countPaidInvestments()}</p></tr>
                 </div>
 

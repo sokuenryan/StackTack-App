@@ -2,46 +2,56 @@ import React, { useState, useEffect } from 'react';
 
 const AddNewBills = () => {
   const [newBillName, setNewBillName] = useState('');
-  const [newBillDate, setNewBillDate] = useState('');
   const [newBillAmount, setNewBillAmount] = useState('');
-  const [selectedWeek, setSelectedWeek] = useState('');
+  const [newBillWeek, setNewBillWeek] = useState('');
+  const [newBillDate, setNewBillDate] = useState('');
+
   const [billsList, setBillsList] = useState(() => {
     const savedBills = localStorage.getItem('billsList');
     return savedBills ? JSON.parse(savedBills) : [];
   });
+
   const [editIndex, setEditIndex] = useState(null);
   const [editBillName, setEditBillName] = useState('');
-  const [editBillDate, setEditBillDate] = useState('');
   const [editBillAmount, setEditBillAmount] = useState('');
+  const [editBillWeek, setEditBillWeek] = useState('');
+  const [editBillDate, setEditBillDate] = useState('');
 
   useEffect(() => {
     localStorage.setItem('billsList', JSON.stringify(billsList));
   }, [billsList]);
 
   const handleAddNewBill = () => {
-    if (newBillName && newBillDate && selectedWeek && newBillAmount) {
+    if (newBillName && newBillAmount && newBillWeek && newBillDate) {
       const newBill = {
         name: newBillName,
-        date: newBillDate,
-        week: selectedWeek,
         amount: parseFloat(newBillAmount),
+        week: newBillWeek,
+        date: newBillDate,
         paid: false,
       };
       setBillsList([...billsList, newBill]);
       setNewBillName('');
-      setNewBillDate('');
       setNewBillAmount('');
-      setSelectedWeek('');
+      setNewBillWeek('');
+      setNewBillDate('');
     }
   };
 
-  const handleEditBill = (index, newName, newDate, newAmount) => {
+  const togglePaid = (index) => {
+    const updatedBills = [...billsList];
+    updatedBills[index].paid = !updatedBills[index].paid;
+    setBillsList(updatedBills);
+  };
+
+  const handleEditBill = (index, newName, newAmount, newWeek, newDate) => {
     const updatedBills = [...billsList];
     updatedBills[index] = {
       ...updatedBills[index],
       name: newName,
-      date: newDate,
       amount: parseFloat(newAmount),
+      week: newWeek,
+      date: newDate, 
     };
     setBillsList(updatedBills);
     setEditIndex(null);
@@ -50,12 +60,6 @@ const AddNewBills = () => {
   const handleDeleteBill = (index) => {
     const updatedBills = [...billsList];
     updatedBills.splice(index, 1);
-    setBillsList(updatedBills);
-  };
-
-  const togglePaid = (index) => {
-    const updatedBills = [...billsList];
-    updatedBills[index].paid = !updatedBills[index].paid;
     setBillsList(updatedBills);
   };
 
@@ -134,7 +138,7 @@ const AddNewBills = () => {
             <div className="submit--week-datedue">
               <div className="submit-week">
                 <label htmlFor='billWeek'>Week of Bill</label>
-                <select value={selectedWeek} onChange={(e) => setSelectedWeek(e.target.value)}>
+                <select value={newBillWeek} onChange={(e) => setNewBillWeek(e.target.value)}>
                   <option value="">Select Week</option>
                   <option value="Week 1">Week 1</option>
                   <option value="Week 2">Week 2</option>
@@ -172,6 +176,7 @@ const AddNewBills = () => {
                     type="text"
                     value={editBillName}
                     onChange={(e) => setEditBillName(e.target.value)}
+                    required
                   />
                   <input
                     className='list-items--amount'
@@ -188,12 +193,13 @@ const AddNewBills = () => {
                     type="date"
                     value={editBillDate}
                     onChange={(e) => setEditBillDate(e.target.value)}
+                    required
                   />
-                    <select 
+                  <select 
                       className='list-items--week-select'
                       id="weekSelect" 
-                      value={selectedWeek} 
-                      onChange={(e) => setSelectedWeek(e.target.value)} 
+                      value={editBillWeek}
+                      onChange={(e) => setEditBillWeek(e.target.value)} 
                       required
                     >
                       <option value="">Select a week</option>
@@ -201,11 +207,11 @@ const AddNewBills = () => {
                       <option value="Week 2">Week 2</option>
                       <option value="Week 3">Week 3</option>
                       <option value="Week 4">Week 4</option>
-                    </select>
-                    <button className='save-btn' onClick={() => handleEditBill(index, editBillName, editBillDate, editBillAmount)}>
-                      Save
-                    </button>
-                    <button className='cancel-btn' onClick={() => setEditIndex(null)}>Cancel</button>
+                  </select>
+                  <button className='save-btn' onClick={() => handleEditBill(index, editBillName, editBillAmount, editBillWeek, editBillDate)}>
+                    Save
+                  </button>
+                  <button className='cancel-btn' onClick={() => setEditIndex(null)}>Cancel</button>
                 </>
               ) : (
                 <>

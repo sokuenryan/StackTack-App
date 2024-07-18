@@ -20,6 +20,7 @@ New Plan:
     -- ADDING MAIN DATA--
         - BOTH the credit and investment "Create New ____" are going to remain
         the same. You will add the name and the amount. 
+status: Complete
 
     --PRINTING OUT TO THE NEXT PAGE--
         - The "Existing _____" tab next to it will FETCH the data just like
@@ -27,14 +28,16 @@ New Plan:
          it is with the same styles as in the "Create New ____" tab. 
 
         - Every time you edit the name or the amount it will update as it pulls the data directly from the local storage. 
+status: Complete
 
-    --CONTRIBUTING--
+    --CONTRIBUTION FEATURE--
         - You will hit the Contribution button and add a number that stores
         itself in the local storage and it will start at 0.00 and add 
         whatever you put in there. 
 
         - Once the new data is stored, The contribution button will keep 
         acting as an addition button to the data stored. 
+status: Complete
 
     --EDITING & DELETING--
         - Editing button will edit the data stored even if it's at the default of 0.00. It only will link to that, 
@@ -45,27 +48,37 @@ New Plan:
 
         - When you do hit delete tho it will delete everything including the data created on "Existing ___" in the 
         incrementor. 
+status: Complete
 
     --MATCHING THE DATA--
         - When the data from "Existing ___" and "Create New _____" MATCHING:
         a toastify message will pop up saying:"Congrats! Progress Complete!"
         or whatever you choose. 
+status: Complete
 
     --Optional-- 
-        - it will set the "paid" checkmark to "true", but it still will be able to be toggled. 
-        Checklists incite the dopamine response so maybe this is not a good idea and counter intuitive. 
+        - it will set the "paid" checkmark to "true",but it still will be able
+         to be toggled. 
+        - Checklists incite the dopamine response so maybe this is not a 
+        good idea and perhaps somewhat counter-intuitive. 
 
-        - This way everything can stay on one line, use multiple tabs for space and clean UI and better UX. 
-
-        - Then you can move onto adding security, the carousel feature and the last few touch ups. 
+        - This way everything can stay on one line, use multiple tabs for 
+        space and clean UI and better UX. 
 -------------------------------------------------------------------------------
 When Finished:
-    -- After the above is set up the last two things are to set up --
+    -- After all the above is complete the last two things to set up are --
         - Add some security features 
             - add a sign-in page
             - add a create account page
 
+        - Make sure that when you delete the user all the data gets deleted
+        when clicked. 
+
         - Re-decorate the home page by
             - adding a carousel feature
-            - enlarging the "welcome" savings
-            - adding an image 
+            - enlarging the "Welcome ____" message
+            - adding an image
+        
+        - Delete any unused code from the CSS files
+        or any other files that have unused or excess 
+        code. 

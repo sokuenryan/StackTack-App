@@ -15,7 +15,7 @@ const AddNewCredit = () => {
         localStorage.setItem('creditsList', JSON.stringify(creditsList));
     }, [creditsList]);
 
-    const handleAddNewCredit = (onCreditSubmit) => {
+    const handleAddNewCredit = () => {
         if (newCreditName && newCreditAmount) {
             const newCredit = {
                 name: newCreditName,
@@ -23,7 +23,6 @@ const AddNewCredit = () => {
                 paid: false,
             };
             setCreditsList([...creditsList, newCredit]);
-            onCreditSubmit(newCredit);
             setNewCreditName('');
             setNewCreditAmount('');
         }
@@ -41,6 +40,8 @@ const AddNewCredit = () => {
     };
 
     const handleDeleteCredit = (index) => {
+        const creditToDelete = creditsList[index];
+        localStorage.removeItem(`contribution-${creditToDelete.name}`);
         const updatedCredits = [...creditsList];
         updatedCredits.splice(index, 1);
         setCreditsList(updatedCredits);
@@ -73,12 +74,12 @@ const AddNewCredit = () => {
         <div className='add-new-credits--create'>
             <tbody className='info-table'>
                 <div className='info'>
-                    <th>Amount Paid</th>
+                    <th>Completed</th>
                     <tr>{calculatePaidFraction()}</tr>
                 </div>
 
                 <div className='info'>
-                    <th>Payments Left</th>
+                    <th>Active</th>
                     <tr><p>{creditsList.length - countPaidCredits()}</p></tr>
                 </div>
 

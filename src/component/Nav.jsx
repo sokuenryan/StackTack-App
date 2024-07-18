@@ -1,13 +1,16 @@
-// rrd imports
 import { Form, NavLink } from "react-router-dom";
-
-// logo image
 import logo from "../assets/logo.png";
-
-// library imports
 import { TrashIcon } from "@heroicons/react/16/solid";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Nav = ({ userName }) => {
+    const clearLocalStorage = () => {
+        localStorage.clear();
+        toast.success("You Have Successfully Delete Your Account!");
+      };
+    
     return (
         <nav>
             <NavLink 
@@ -28,9 +31,14 @@ const Nav = ({ userName }) => {
                         }
                     }}
                 >
-                    <button type="submit" className="btn btn--warning">
+                    <button 
+                        className="btn btn--warning"
+                        type="submit"
+                        onClick={clearLocalStorage}
+                    >
                         <span> Delete User</span>
                         <TrashIcon width={20} />
+                        <ToastContainer />
                     </button>
                 </Form>
             )

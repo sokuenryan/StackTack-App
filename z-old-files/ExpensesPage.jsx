@@ -36,8 +36,6 @@ export async function expensesAction({ request }) {
     
 }
 
-
-
 const ExpensesPage = () => {
     const { expenses } = useLoaderData();
 
