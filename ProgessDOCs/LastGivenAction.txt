@@ -1,0 +1,174 @@
+Last given action on 6/3/2024 
+    - working on making the bills print out the bottom using similar code that I had
+    used in the react-router-budget-app VScode file.  
+
+Last given action on 6/13/2024
+    - Working on a way to get the bill-content class to expapnd with 
+    the number of added bills. 
+    - Considered making it so that after a certain number of bills were submitted,
+    it would switch pages. Wanted the data to also be printed to the Calendar on the
+    next tab. 
+    - Still haven't yet decided if I am going to follow the UXUI wireframe in that 
+    regard yet. 
+
+Last given action on 6/14/2024 
+    - I am adding an dropdown menu for weeks 1 - 4 in replacement of dropdown 
+    'categories' 
+
+Last given action on 6/27/2024
+    - Currrently restructuring the Recent Bills Menu to look a bit more neat when 
+    there is mass amount of data printed. 
+    - Need to get a client side server up so that the data can save itself and not be 
+    deleted when refreshed. 
+
+    - Hopefully soon I will be able to duplicate everything into the next 2 buttons: 
+    Investments and Credit. But before that I need to be able to have the table 
+    update itself and to be able to have the table do that, I need to have a Client 
+    side server be able to run CRUD.
+
+Last given action 6/28/2024
+    - Had trouble getting the percentage to update on the other component, so I just 
+    included it in the same one. 
+    - Figured it would also be more time effiecient 
+    anyways and I figured the design was already a bit different anyways with the
+    "week" dropdown menu. 
+
+Last given action 7//1/2024
+    - I had just restructued the Create New Bills page, changed up the dimensions and 
+    the colors a bit. It's now working beautifly. 
+    - I have just made it so that the fractions can be calculated successfuly out of 
+    total bills. 
+    - My next action I need to do is get it to print out a whole number under 
+    'Bill Left'. 
+
+Last given action 7/2/2024
+    - I completed the Create New Bills tab area of the Bills Section. 
+    - Currently working on the Calendar Tab.
+    - successfully added the react-calendar to the application and styled it. 
+    The next thing I need to work on is getting whatever bills are printed out in the 
+    "Bill List" section to show up on the next tab in the designated dates given. 
+    - Hopefully after I can duplicate most of this code into the Investments and Credit 
+    area and then the whole project is completed! 
+
+Last given action 7/3/2024
+    - I had a slight issue last night with git push due to changing the repo name.
+    - It was saying something about not having some things saved locally and this
+    being due to the fact that there were more than one repo being pushed by the same 
+    ref. 
+    - I had to do a git pull before doing a git push and then it worked. 
+ 
+Last given action 7/4/2024
+    - A bit of screwing around with things. I need to do more styling since I edited
+     it a lot mostly with the bill list area. 
+    - Calendar does print out to it, but does not update when deleting or editing. 
+    - SAVE THIS TO YOUR REPO ASAP! 
+
+Last given action 07/05/2024
+    - Spent most the shift getting the react-calendar to work. 
+    - BUG 1: wasn't printing to the calendar 
+
+    - BUG 2: When it did print to the calendar, it didn't change when I edited 
+    or deleted the data. 
+    - Tried to edit the handleEdit and the handleDelete added several different
+    lines of code
+    - Went through several copy and pastings from github to reset, 
+    - Turned to AI for help with debugging
+    - Ended up deleting several conversation when it got to messy and the AI I believe
+    was causing more issues.
+
+Last given action of 07/08/2024
+    - Started on the new tab called "investment" but there were a lot of naming 
+    issues with the classnames. 
+    - Duplicated most of the code from the Bills.jsx over to the investment 
+    portion of the application, but it still needs some major fix ups. 
+    Removed 3 major components: The week dropdown-menu, the date input, and the 
+    child compoent Calendar mainly associated with the parent component of Bills.jsx. 
+
+Last given action 07/10/2024
+    - Calendar got screwed up on styling  at some point. 
+    - The several duplication attempts to take the code from the bills section
+    to the investments section seemed to create more issues.  
+    - The calendar styles were not being registered and the reason 
+    - The reason was I had imported the react-calendar/dist/Calendar.css file
+    from node_modules and it was overriding my styles. 
+    - But it was working fine before.
+
+Last given action of 07/11/2024
+ - created the Credit page. 
+ - created the Investments page. 
+
+Last Given action of 07/16/2024
+    - I have successfully started implementing the plans into place
+    - I added a new tab page to both Investment and Credit called Existing
+    Investments or Existing Credit. 
+    - Existing Investments can so far print the name and the amount from 
+    the Create NewInvestment Data onto it. 
+    - I also inplmented a working contribute and edit button. 
+    - Contribute button can add numbers but cannot save the data. 
+    - Edit button can edit the number contributed successfully and has 
+    an 'update' button. 
+    - Edit button needs CSS styling
+    - The Existing Credit needs the same features as the Existing Investments
+    so Once I finish with that I will copy and paste the similar features to 
+    Existing Credit and alt what is needed.
+    - Added a banner so you can't add any contribution number that exeeds
+    that of the current Investment
+
+    --Update-- 
+    - Finished the Existing Investments page. 
+    - Able to pull data from investmentsList so that whatever data get created
+    it can print out onto the next tab page.
+    - has a working contribution button that can add any number and print it 
+    out with a default of 0.00
+    - All the data created by the contribution button can also be saved to the
+    local storage. Just like the investmentList. 
+    - Has the ability to recognize when the contribution amount matches the 
+    investmentList amount and bring up a pop up message that congratulates the
+    user on reaching their investent marker.
+    - Has and edit button that can update the amount if by accident you put in
+    the wrong contribution amount. 
+    - updated the AddNewInvestment page so that when you hit delete it also
+    deletes the data that was also made in contributions. 
+    - This way when you create a new investment and then click on the the 
+    "existing investments" tab it won't auto show the old data of the last 
+    contribution amount since before it wasn't attached to that component that
+    created the list in the first place. 
+
+Last given action 07/17/2024
+ - completed the Credit page. 
+ - has all the same functionality as the investments page. 
+ - styling and fuctionality mostly all the same as the investment page. 
+ - changed the classNames. 
+ - Credit page has the ability to create a new credit line name and establish
+ a specified debt number. 
+ - Credit page also has the ability to use CRUD complete with a checkmark 
+ toggle button to signify if it's paid or not. 
+ - Ability to edit the name and the amount
+ - Ability to delete the listed items
+ - Also able to be stored in the local storage. 
+ - has a secondary tab called Existing Credit lines
+ - Existing Credit tab fetches data from the creditsList key value pair in 
+ the local storage created by the Create New Credit Line tab. 
+ - Has the ability to name the name and amount 
+ - Has a contribution button with the ability to save the contribution amount 
+ to the local storage. 
+ - Has the ability to edit the amount and change it in the local storage
+
+--additonal fixes--
+    - Made it so that when you delete the data from the listed items created
+    in the Create New Credit Line tab it also deletes all corrisponding 
+    contribution data created in the Existing Credit Lines tab. 
+
+    - Corrected the credit page so that it was able to clear the input logs
+    after submitting the Credit line entry.
+
+    - Had an issue with the AddNewBill where the week wasn't updating 
+    when using the edit button. 
+    - Bug was fixed so now it can. There was no issue when creating the bill.
+    
+    - Fixed the banner message in the Credit page, due to the fact it said 
+    "Your current contribution exceeds your current investment amount"
+    - Altered the toastify message to include an celebration emoji
+    - Altered the text on the "table" feature on the Credit page so now it says 
+    "Completed", "Active", and "Progress" instead of 
+    "Amount Paid" "Amount Left", and "Progress"

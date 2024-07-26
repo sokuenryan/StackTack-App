@@ -1,0 +1,46 @@
+/* tab sections */
+.tab-table {
+    border: 2px solid lightgray;
+    max-width: 100%;
+    margin-right: 180px;
+    height: 600px;
+};
+
+.tabs {
+    width: 100%;
+}
+
+.tab-btns {
+    display: flex;
+    justify-content: right;
+}
+
+.tab-btns button {
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* table section */
+.info-table {
+    border: 1px solid lightgray;
+    display: grid;
+    height: 333px;
+}
+
+.info {
+    height: 5px;
+}
+
+.info th {
+    background-color: lightgray;
+    width: 190px;
+}
+
+.info tr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}

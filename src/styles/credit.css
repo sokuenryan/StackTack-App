@@ -1,0 +1,60 @@
+/* Credit */
+.credit {
+    display: flex;
+    flex-direction: row;
+}
+
+.credit-content {
+    margin-left: 30px;
+    width: 100%;
+}
+
+/* Add New Credit  */
+.add-new-credits-wrapper {
+    display: grid;
+}
+
+.add-new-credits--create {
+    display: flex;
+}
+
+.add-new-credits {
+    width: 20px;
+}
+
+.add-new-credits h1 {
+    font-family: 'Roboto', sans-serif;
+    margin: 25px 45px 15px 45px;
+    font-size: 40px;
+    width: 250px;
+}
+
+/* Existing Credit */
+.existing-credits li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: lightgray;
+    border: 1px solid lightslategray;
+    padding-left: 10px;
+    height: 66px;
+}
+
+.existing-credit--name-amount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 66px;
+    width: 100%;
+}
+
+.existing-credit-amount {
+    display: flex;
+    gap: 5px;
+}
+
+.existing-credit-name {
+    display: flex;
+    gap: 5px;
+    width: 415px;
+}

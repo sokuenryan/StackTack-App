@@ -1,5 +1,3 @@
-/* ⚠️ CSS optimized for the tutorial, not for expanding to a larger site. ⚠️ */
-
 *,
 *::before,
 *::after {
@@ -7,15 +5,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-svg {
-  pointer-events: none;
 }
 
 :root {
@@ -30,7 +19,7 @@ svg {
   --lh-1-4: 1.4;
 
   /* colors */
-  --accent: 183 74% 44%;
+  --accent: 100 74% 44%;
   --bkg: 190 60% 98%;
   --text: 185 26% 9%;
   --muted: 183 8% 55%;
@@ -40,15 +29,8 @@ svg {
   /* utils */
   --space-xs: 8px;
   --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 32px;
-  --space-xl: 40px;
   --content-sm: 40ch;
-  --content: 60ch;
   --round-sm: 4px;
-  --round-md: 10px;
-  --round-lg: 25px;
-  --round-full: 100vmax;
 
   /* toast customizations */
   --toastify-color-success: hsl(var(--accent));
@@ -287,11 +269,10 @@ p {
 
 main {
   max-width: 1500px;
+  padding-left: 30px;
   width: 100%;
-  padding: var(--space-md) var(--space-md) var(--space-xl);
   margin-inline: auto;
   display: -ms-grid;
-  display: grid;
   place-items: start;
 }
 
@@ -307,7 +288,7 @@ nav {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  padding: var(--space-md);
+  padding: 15px 10px 15px 20px;
   max-width: 1500px;
   margin-inline: auto;
 }
@@ -319,10 +300,18 @@ nav a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: var(--space-xs);
   padding: var(--space-xs);
   text-decoration: none;
   font-weight: bold;
+}
+
+nav h3 {
+  font-size: 40px;
+  margin-left: 5px;
+}
+
+nav span {
+   color: hsl(100 74% 44%);
 }
 
 @media screen and (max-width: 525px) {
@@ -410,6 +399,7 @@ select {
   place-items: start;
   width: 100%;
 }
+
 
 /* form */
 .form-wrapper {

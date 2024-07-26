@@ -1,0 +1,43 @@
+.contribution {
+    display: flex;
+    height: 45px;
+    width: 100%;
+    align-items: center;
+}
+
+.contribute-btns-wrapper {
+    display: flex;
+    justify-content: right;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.contribution button {
+    width: 92px;
+    height: 44px;
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+.contribution-amount {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    margin-left: 5px;
+}
+
+.contribution-amount input {
+    width: 100px;
+}
+
+.edit-contribution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.edit-contribution input {
+    width: 100px;
+}

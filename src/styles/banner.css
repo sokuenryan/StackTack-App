@@ -1,0 +1,32 @@
+.notification-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    z-index: 1000;
+    animation: slideDown 0.5s ease;
+  }
+  
+  .notification-banner button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  @keyframes slideDown {
+    from {
+      top: -50px;
+    }
+    to {
+      top: 0;
+    }
+  }
+  

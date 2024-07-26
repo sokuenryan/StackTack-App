@@ -1,0 +1,34 @@
+    LESSON:
+    - Don't change the repo name. It overcomplicates things.
+    
+    LESSON: Sometimes it's better to FETCH data than PASS DATA. 
+    The first idea was to pass the data from one child component up to the parent 
+    component and then once updated in the parent component, pass it down to a
+    different child component.
+    
+    - Making the child components independant of other components seems to make data 
+    functionality WAYYYYY easier to work with. 
+    - It also decreases the chance of needing to fix anything at all. 
+    - Almost seems like a regular family. Componets need to be independant but also 
+    simultaneously co-existant with other components. Hyper-dependant components seem 
+    to make things very messy. 
+    
+    
+    Had a lengthy phone conversation and had to make up the time at home. 
+    Spend more time on your code today so you don't have later. 
+    Remember,you got this. Stay on track. You have not far to go. 
+    Believe and Perservere.
+        - past Zee. :)
+
+    NOTE:
+    - AI is programmed to act like it knows what it's talking about, and after
+    several conversations it kept asking me to check and double check different parts 
+    of my code to make sure it was working properly which it should've been but it
+    wasn't. 
+
+    Notes: 
+    - You have to input your own styles in first, and THEN you can import the 
+    node_modules after. I beleive that's why it worked before. 
+    - Copying and pasting seemed to keep making me mess up classNames in the code. 
+    - Deleting certain things in huge chunks isn't good as much of the code is linked
+     to other parts that make it function and this tends to create bugs quite quickly. 
