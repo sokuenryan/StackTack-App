@@ -10,7 +10,6 @@ import { PlusCircleIcon } from "@heroicons/react/16/solid";
 const AddExpenseForm = ({ budgets }) => {
     const fetcher = useFetcher();
     const isSubmitting = fetcher.state === "submitting"
-
     const formRef = useRef();
     const focusRef = useRef();
 

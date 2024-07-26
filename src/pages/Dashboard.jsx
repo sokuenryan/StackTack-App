@@ -121,7 +121,6 @@ const Dashboard = () => {
                                                 View all expenses
                                             </Link>
                                         )
-
                                         }
                                     </div>
                                 )
