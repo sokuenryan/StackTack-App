@@ -172,3 +172,35 @@ Last given action 07/17/2024
     - Altered the text on the "table" feature on the Credit page so now it says 
     "Completed", "Active", and "Progress" instead of 
     "Amount Paid" "Amount Left", and "Progress"
+
+Last given action of 07/18/2024
+ - fixed a few issues with the helpers.js and the Logout.jsx file. 
+ - There was some unnecessary code in the those files so I sorted it and deleted 
+ it for maintainability and readability purposes. 
+
+Last given action of 07/25/2024 
+ - I have set up Firebase on my code so I can know have and use Google API to run
+ backend 
+ - I still have a few issues to work out includeing styling, cybersecurity measures,
+    among other things. (See plans for that info)
+
+
+Last given action of 7/25/2024
+    - Restyled all the components at zoom level of 100%
+    - Condensed some of the code by changing the classnames
+    - Removed the logout and delete data buttons from the sign in
+    and register pages 
+
+    - Added a login button to the Register page
+    - Styled it briely but need more work
+
+Last given action of 8/7/2024
+    - First upon review and for clarification purposes I have added a login and register page
+    - Styling for the login and register page is complete
+    - I changed the names of some of the css files and deleted a lot of unused code
+    - I also deleted the clear all data button as well
+    - I modified / updated firebase so that the app can have storage as well as a few extra
+    features on  there as well. 
+    - I altered some of the styling features of each page
+    - Turned "add bill", "add investment", and "add credit" into a "submit" button instead. 
+    - Added cybersecurity measures to the page using PrivateRoute combined with Firebase

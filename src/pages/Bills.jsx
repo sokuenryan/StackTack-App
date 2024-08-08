@@ -37,9 +37,9 @@ const Bills = () => {
   };
 
   return (
-    <div className='bills setup'>
+    <div className='bills content-setup'>
       <Sidebar />
-      <div className='bills-content'>
+      <div className='content'>
         <div className='tab-table'>
           <div className='tabs'>
             <div className='tab-btns'>

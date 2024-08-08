@@ -122,15 +122,15 @@ const ExistingInvestments = () => {
   return (
     <div className='existing-investments'>
       <ToastContainer />
-      <ul>
+      <ul className='existing-data'>
         {investmentsList.map((investment, index) => (
           <li key={index}>
-            <div className='existing-investment--name-amount'>
-              <div className="existing-investment-name">
+            <div className='existing-data--name-amount'>
+              <div className="existing-data-name">
                 <strong>Name:</strong> {investment.name}
               </div>
               
-              <div className="existing-investment-amount">
+              <div className="existing-data-amount">
                 <strong> Amount:</strong> ${investment.amount}/
               </div>
             </div>

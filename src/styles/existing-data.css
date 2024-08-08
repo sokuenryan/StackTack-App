@@ -1,0 +1,31 @@
+/* Existing Data Styles */
+.existing-data li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: lightgray;
+    border: 1px solid lightslategray;
+    padding-left: 10px;
+    height: 66px;
+}
+
+.existing-data--name-amount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 66px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.existing-data-amount {
+    display: flex;
+    gap: 5px;
+}
+
+.existing-data-name {
+    display: flex;
+    gap: 5px;
+    width: 415px;
+}
+

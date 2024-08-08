@@ -1,5 +1,5 @@
 .list-items h1 {
-    font-size: 40px;
+    font-size: 30px;
     margin: 40px 0px 15px 30px;
 }
 
@@ -16,39 +16,36 @@
     border: 1px solid lightslategray;
     padding-left: 10px;
     list-style-type: none;
-    height: 66px;
 }
 
 .list-items-info {
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 30px;
     align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    gap: 50px;
 }
 
 .list-items--name-amount {
     display: flex;
-    width: 100%;
 }
 
 .list-items--week-datedue {
     display: flex;
-    width: 444px;
-    justify-content: right;
     margin-right: 10px;
 }
 
 .list-items-modifiers {
     display: flex;
-    justify-content: right;
-    width: 248px;
     align-items: center;
 }
 
 .list-items--checkbox {
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 30px;
     width: 40px;
     margin-right: 10px;
 }
@@ -57,30 +54,30 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 30px;
     border: 2px solid #ccc;
     border-radius: 3px;
     position: relative;
     cursor: pointer;
-  }
+}
 
-  .list-items--checkbox input[type="checkbox"]:checked {
+.list-items--checkbox input[type="checkbox"]:checked {
     background-color: hsl(var(--accent));
     border-color: hsl(var(--accent));
-  }
+}
 
-  .list-items--checkbox input[type="checkbox"]:checked::before {
+.list-items--checkbox input[type="checkbox"]:checked::before {
     content: '';
     position: absolute;
-    top: -2px;
-    left: 9px;
-    width: 18px;
-    height: 35px;
+    top: -3px;
+    left: 10px;
+    width: 13px;
+    height: 27px;
     border: solid white;
-    border-width: 0 10px 10px 0;
+    border-width: 0 7px 7px 0;
     transform: rotate(45deg);
-  }
+}
 
 .list-items--btns {
     display: flex;
@@ -88,6 +85,20 @@
     justify-content: right;
     height: 50px;
     gap: 4px;
+    margin-right: 5px;
+}
+
+.list-items button {
+    width: 60px;
+    height: 30px;
+    margin: 3px 0px 3px 3px;
+}
+
+.list-items select {
+    height: 40px;
+    width: 210px;
+    font-size: 18px;
+    margin: 2px 0px 2px 0px;
 }
 
 .list-items--name {
@@ -100,23 +111,12 @@
     height: 40px;
 }
 
-.list-items select {
-    height: 40px;
-    width: 210px;
-    font-size: 18px;
-    margin: 2px 0px 2px 0px;
-}
 
 .list-items--date {
     width: 210px;
     height: 40px;
 }
 
-.list-items button {
-    width: 70px;
-    height: 40px;
-    margin: 2px 0px 2px 2px;
-}
 
 .list-items button:hover {
     color: black;

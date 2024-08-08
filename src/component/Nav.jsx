@@ -1,49 +1,49 @@
-import { Form, NavLink } from "react-router-dom";
-import logo from "../assets/logo.png";
-import { TrashIcon } from "@heroicons/react/16/solid";
+import { Form, useLocation } from "react-router-dom";
+import logo from "../assets/images/logo.png";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Nav = ({ userName }) => {
+import { TrashIcon } from "@heroicons/react/16/solid";
+import { IoExitOutline } from "react-icons/io5";
+
+const Nav = () => {
     const clearLocalStorage = () => {
         localStorage.clear();
-        toast.success("You Have Successfully Delete Your Account!");
-      };
-    
+        toast.success("You Have Successfully Delete All Data!");
+    };
+
+    const location = useLocation();
+    const isAuthPage = location.pathname === '/' || location.pathname === '/register';
+
     return (
-        <nav>
-            <NavLink 
-                to="/"
-                aria-label="Go to home"
-            >
+        <nav className="nav">
+            <div className="nav-icon">
                 <img src={ logo } height={35} />
                 <h3><span>Stack</span>Tack</h3>
-            </NavLink>
-            {
-                userName && (
-                    <Form
-                    method="post"
-                    action="/logout"
-                    onSubmit={(event) => {
-                        if (!confirm("Delete user and all data?")) {
-                            event.preventDefault();
-                        }
-                    }}
+            </div>
+            
+            <div className="nav-btns">
+                <Form
+                    to="/"
+                    aria-label="logout"
                 >
-                    <button 
-                        className="btn btn--warning"
-                        type="submit"
-                        onClick={clearLocalStorage}
-                    >
-                        <span> Delete User</span>
-                        <TrashIcon width={20} />
-                        <ToastContainer />
-                    </button>
+                    {
+                        !isAuthPage && (
+                            <>
+                                <button
+                                    className="btn btn--warning"
+                                    type="submit"
+                                >
+                                    <span>Logout</span>
+                                    <IoExitOutline
+                                    />
+                                </button>
+                            </>
+                        )
+                    }
                 </Form>
-            )
-            }
-
+            </div>    
         </nav>
     )
 }

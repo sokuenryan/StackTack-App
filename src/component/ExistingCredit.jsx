@@ -120,17 +120,17 @@ const ExistingCredit = () => {
 
 
   return (
-    <div className='existing-credits'>
+    <div className='existing-data'>
       <ToastContainer />
       <ul>
         {creditsList.map((credit, index) => (
           <li key={index}>
-            <div className='existing-credit--name-amount'>
-              <div className="existing-credit-name">
+            <div className='existing-data--name-amount'>
+              <div className="existing-data-name">
                 <strong>Name:</strong> {credit.name}
               </div>
               
-              <div className="existing-credit-amount">
+              <div className="existing-data-amount">
                 <strong> Amount:</strong> ${credit.amount}/
               </div>
             </div>

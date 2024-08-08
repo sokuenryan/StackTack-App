@@ -86,59 +86,72 @@ const AddNewBills = () => {
   };
 
   return (
-    <div className="add-new-bills-wrapper">
-      <div className="add-new-bills--create">
-        <tbody className='info-table'>
-          <div className='info'>
-            <th>Bills Paid</th>
-            <tr>{calculatePaidFraction()}</tr>
-          </div>
+    <div className="content-wrapper">
+      <div className="content--create">
+        <table>
+          <tbody className="progress">
+            <tr>
+              <th>Bills Paid</th>
+              <td>{calculatePaidFraction()}</td>
+            </tr>
 
-          <div className='info'>
-            <th>Bills Left</th>
-            <tr><p>{billsList.length - countPaidBills()}</p></tr>
-          </div>
+            <tr>
+              <th>Bills Left</th>
+              <td>{billsList.length - countPaidBills()}</td>
+            </tr>
 
-          <div className='info'>
-            <th>Progress Made</th>
-            <tr>{calculatePaidPercentage()}%</tr>
-          </div>
-        </tbody>
+            <tr>
+              <th>Progress</th>
+              <td>{calculatePaidPercentage()}%</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <div className='add-new-bills'>
+        <div className='content'>
           <h1>Add New Bill</h1>
+          
           <div className="submission-data">
-            <div className="submit--name-amount">
-              <div className="submit-name">
-                <label htmlFor='billName'>Bill Name</label>
-                <input
-                type="text"
-                placeholder="Enter Bill Name"
-                maxLength={25}
-                value={newBillName}
-                onChange={(e) => setNewBillName(e.target.value)}
-                required
-                />
-              </div>
+            <div className="submission-data-content">
+              <div className="submit--name-amount">
+                <div className="submit-name">
+                  <label htmlFor="billName">Bill Name</label>
+                  <input
+                    type="text"
+                    id="billName" 
+                    name="billName" 
+                    placeholder="Enter Bill Name"
+                    maxLength={25}
+                    value={newBillName}
+                    onChange={(e) => setNewBillName(e.target.value)}
+                    required
+                  />
+                </div>
+
               <div className="submit-amount">
-                <label htmlFor='billAmount'>Amount</label>
+                <label htmlFor="billAmount">Amount</label>
                 <input
                   type="number"
+                  id="billAmount"
                   step="0.01"
-                  inputMode='decimal'
-                  name='billAmount'
-                  placeholder='$0.00'
+                  inputMode="decimal"
+                  name="billAmount"
+                  placeholder="$0.00"
                   value={newBillAmount}
                   onChange={(e) => setNewBillAmount(e.target.value)}
                   required
                 />
               </div>
-            </div>
 
-            <div className="submit--week-datedue">
+              </div>
+
+              <div className="submit--week-datedue">
               <div className="submit-week">
-                <label htmlFor='billWeek'>Week of Bill</label>
-                <select value={newBillWeek} onChange={(e) => setNewBillWeek(e.target.value)}>
+                <label htmlFor="billWeek">Week of Bill</label>
+                <select
+                  id="billWeek"
+                  value={newBillWeek}
+                  onChange={(e) => setNewBillWeek(e.target.value)}
+                >
                   <option value="">Select Week</option>
                   <option value="Week 1">Week 1</option>
                   <option value="Week 2">Week 2</option>
@@ -147,18 +160,22 @@ const AddNewBills = () => {
                 </select>
               </div>
 
+
               <div className="submit-datedue">
-                <label htmlFor='billDate'>Bill Date</label>
+                <label htmlFor="billDate">Bill Date</label>
                 <input
                   type="date"
-                  max='9999-12-31'
+                  id="billDate"
+                  max="9999-12-31"
                   value={newBillDate}
                   onChange={(e) => setNewBillDate(e.target.value)}
                   required
                 />
               </div>
+
+              </div>
+              <button className="btn" onClick={handleAddNewBill}>Add Bill</button>
             </div>
-            <button onClick={handleAddNewBill}>Add Bill</button>
           </div>
         </div>
       </div>

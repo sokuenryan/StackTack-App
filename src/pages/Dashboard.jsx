@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
 import { fetchData } from "../helpers";
 import Sidebar from "../component/Sidebar";
-import Intro from "../component/Intro";
+import Login from "../pages/Login";
 
 export function dashboardLoader() {
     const userName = fetchData("userName");
@@ -36,7 +36,7 @@ const Dashboard = () => {
                     <Sidebar />
                 </div>
             ) : (
-                <Intro />
+                <Login />
             )}
         </>
     );

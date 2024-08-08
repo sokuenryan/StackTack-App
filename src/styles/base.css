@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --accent: 100 74% 44%;
+  --bkg: 190 60% 98%;
+  --text: 185 26% 9%;
+  --muted: 183 8% 55%;
+  --light: 180 14% 85%;
+  --warning: 4 66% 63%;
+
+  /* utils */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --content-sm: 40ch;
+  --round-sm: 4px;
+
+  /* toast customizations */
+  --toastify-color-success: hsl(var(--accent));
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: var(--fs-400);
+  line-height: var(--lh-1-4);
+  font-weight: 400;
+  font-synthesis: none;
+  background-color: hsl(var(--bkg));
+  color: hsl(var(--text));
+}
+
+
+/* links and buttons */
+:where(a, .btn) {
+  --color: hsl(var(--text));
+  --backdrop: hsl(var(--accent));
+  font: inherit;
+  color: var(--color);
+  border-radius: var(--round-sm);
+}
+
+:where(a, .btn):focus {
+  outline: none;
+}
+
+:where(a, .btn):is(:hover, :focus-visible) {
+  -webkit-box-shadow: 0 0 0 3px hsl(var(--bkg)), 0 0 0 6px var(--backdrop);
+  box-shadow: 0 0 0 3px hsl(var(--bkg)), 0 0 0 6px var(--backdrop);
+}
+
+:where(.btn) {
+  --color: hsl(var(--bkg));
+  background-color: var(--backdrop);
+  color: var(--color);
+  padding: var(--space-xs) var(--space-sm);
+  border: 2px solid var(--backdrop);
+  font-size: var(--fs-300);
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: var(--space-xs);
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  cursor: pointer;
+}
+
+:where(.btn):is(:hover, :focus-visible) {
+  background-color: var(--backdrop);
+  color: var(--color);
+}
+
+:where(.btn--dark) {
+  --backdrop: hsl(var(--text));
+}
+
+:where(.btn--outline) {
+  background-color: var(--color);
+  color: var(--backdrop);
+  border: 2px solid var(--backdrop);
+}
+
+:where(.btn--outline):is(:hover, :focus-visible) {
+  --backdrop: var(--outline);
+  --color: hsl(var(--bkg));
+  outline: 0px solid var(--outline);
+}
+
+:where(.btn--warning) {
+  --backdrop: hsl(var(--warning) / 0.1);
+  border: 2px solid hsl(var(--warning));
+  --color: hsl(var(--warning));
+}
+
+:where(.btn--warning):is(:hover, :focus-visible) {
+  --backdrop: hsl(var(--warning));
+  --color: hsl(var(--bkg));
+}
+
+.btn[disabled] {
+  opacity: 0.5;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* main layout */
+.layout {
+  display: grid;
+  min-height: 100vh;
+  -ms-grid-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+}
+
+.layout > img {
+  width: 100%;
+}
+
+main {
+  max-width: 1500px;
+  width: 100%;
+  margin-inline: auto;
+  place-items: start;
+}
+
+
+/* forms */
+label {
+  font-size: var(--fs-300);
+  font-weight: bold;
+}
+
+input,
+select {
+  font: inherit;
+  font-size: var(--fs-300);
+  background-color: hsl(var(--bkg));
+  border: 2px solid hsl(var(--muted));
+  border-radius: var(--round-sm);
+  padding: var(--space-xs) var(--space-sm);
+}
+
+:is(input, select):focus {
+  outline: none;
+  border-color: hsl(var(--accent));
+  -webkit-box-shadow: 0 0 0 1px hsl(var(--accent));
+  box-shadow: 0 0 0 1px hsl(var(--accent));
+}
+
+
+/* toast */
+.Toastify__toast-body {
+  font-size: var(--fs-300);
+}

@@ -1,0 +1,29 @@
+.progress {
+    display: grid;
+    height: 30px;
+    width: 150px;
+}
+
+.progress tr {
+    display: flex;
+    flex-direction: column;
+}
+
+.progress th {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    height: 35px;
+    font-size: 15px;
+}
+
+.progress td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 40px;
+    font-weight: 600;
+    font-size: 15px;
+}

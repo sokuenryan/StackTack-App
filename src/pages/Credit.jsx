@@ -37,9 +37,9 @@ const Credit = () => {
   };
 
   return (
-    <div className='credit setup'>
+    <div className='credit content-setup'>
       <Sidebar />
-      <div className="credit-content">
+      <div className="content">
         <div className='tab-table'>
           <div className='tabs'>
             <div className="tab-btns">

@@ -14,13 +14,13 @@ Plans Draft:
     the homepage. 
 
 New Plan: 
-    - Due to some discoveries made while coding I came up with the UI UX design for the Credit and Investment
+    Due to some discoveries made while coding I came up with the UI UX design for the Credit and Investment
     tabs. 
 
     -- ADDING MAIN DATA--
         - BOTH the credit and investment "Create New ____" are going to remain
         the same. You will add the name and the amount. 
-status: Complete
+    status: Complete
 
     --PRINTING OUT TO THE NEXT PAGE--
         - The "Existing _____" tab next to it will FETCH the data just like
@@ -28,7 +28,7 @@ status: Complete
          it is with the same styles as in the "Create New ____" tab. 
 
         - Every time you edit the name or the amount it will update as it pulls the data directly from the local storage. 
-status: Complete
+    status: Complete
 
     --CONTRIBUTION FEATURE--
         - You will hit the Contribution button and add a number that stores
@@ -37,7 +37,7 @@ status: Complete
 
         - Once the new data is stored, The contribution button will keep 
         acting as an addition button to the data stored. 
-status: Complete
+    status: Complete
 
     --EDITING & DELETING--
         - Editing button will edit the data stored even if it's at the default of 0.00. It only will link to that, 
@@ -48,13 +48,13 @@ status: Complete
 
         - When you do hit delete tho it will delete everything including the data created on "Existing ___" in the 
         incrementor. 
-status: Complete
+    status: Complete
 
     --MATCHING THE DATA--
         - When the data from "Existing ___" and "Create New _____" MATCHING:
         a toastify message will pop up saying:"Congrats! Progress Complete!"
         or whatever you choose. 
-status: Complete
+    status: Complete
 
     --Optional-- 
         - it will set the "paid" checkmark to "true",but it still will be able
@@ -66,21 +66,54 @@ status: Complete
         space and clean UI and better UX. 
 -------------------------------------------------------------------------------
 When Finished:
-    -- After all the above is complete the last two things to set up are --
-        - Add some security features 
-            - add a sign-in page
-            - add a create account page
+    After all the above is complete the last two things to set up are
+       
+    --ADDING SECURITY--
+        - Add some security features like Firebase
+        - Make sure that you can't hack past the account by utilizing the URL
+    Status Complete
 
-        - Make sure that when you delete the user all the data gets deleted
-        when clicked. 
+    --ADDING ADDITIONAL PAGES
+        - add a sign-in page
+        - add a create account page
+    status: Complete
 
-        - Re-decorate the home page by
-            - adding a carousel feature
-            - enlarging the "Welcome ____" message
-            - adding an image
-        
+    --STYLING AT 100%--
+        - Shrink everything down
+        - Make sure you do it with insight to make sure that it's easy enough to make it mobile responsive. 
+    status: Complete
+
+    --DATA DELETING--
+        - Make sure that you can delete all the data
+        - Make sure that the toastify message only pops up when you hit yes on the pop up alert 
+        because when you hit cancel it still pops up. 
+        - Edit: ended up deleting the feature
+    status: Complete
+
+    --LOGOUT BUTTON--
+        - Add a logout button
+        - Make sure it fully fuctional and sends you pack to the login page
+    status: Complete
+
+    --ADDING ADDITIONAL FEATURES TO THE LOGIN PAGE--
+        - Add the photo the the right
+        - Style the right side component
+        - Style the left side component
+        - EDIT: Different UI: NO picture due to rendering delays 
+    status: Complete
+
+    --MAKING IT MOBILE RESPONSIVE--
+        - Remember to also make it mobile responsive!!!
+
+
+    --REMOVING EXCESS CODE--
         - Delete any unused code from the CSS files
         or any other files that have unused or excess 
-        code. 
+        code.
 
-        - Remember to also make it mobile responsive!!!
+    --CLEAN UP YOUR CODE--
+        - Organize your code to have a fresher and cleaner look 
+        - Organize files to make them easier to read and sort through 
+
+
+

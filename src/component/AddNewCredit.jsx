@@ -70,26 +70,28 @@ const AddNewCredit = () => {
     };
 
   return (
-    <div className='add-new-credits-wrapper'>
-        <div className='add-new-credits--create'>
-            <tbody className='info-table'>
-                <div className='info'>
-                    <th>Completed</th>
-                    <tr>{calculatePaidFraction()}</tr>
-                </div>
+    <div className='content-wrapper'>
+        <div className='content--create'>
+            <table>
+                <tbody className="progress">
+                    <tr>
+                        <th>Completed</th>
+                        <td>{calculatePaidFraction()}</td>
+                    </tr>
 
-                <div className='info'>
-                    <th>Active</th>
-                    <tr><p>{creditsList.length - countPaidCredits()}</p></tr>
-                </div>
+                    <tr>
+                        <th>Active</th>
+                        <td>{creditsList.length - countPaidCredits()}</td>
+                    </tr>
 
-                <div className='info'>
-                    <th>Progress</th>
-                    <tr>{calculatePaidPercentage()}%</tr>
-                </div>
-            </tbody>
+                    <tr>
+                        <th>Progress</th>
+                        <td>{calculatePaidPercentage()}%</td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <div className='add-new-credits'>
+            <div className='content'>
                 <h1>Add New Credit </h1>
                 <div className="submission-data">
                     <div className='submit--name-amount'>
@@ -118,10 +120,11 @@ const AddNewCredit = () => {
                             />
                         </div>
                     </div>
-                    <button 
-                    onClick={handleAddNewCredit}
-                    style={{marginTop: '30px'}}>
-                        Add Credit
+                    <button
+                        className='btn' 
+                        onClick={handleAddNewCredit}
+                    >
+                        Submit
                     </button>
                 </div>
             </div>

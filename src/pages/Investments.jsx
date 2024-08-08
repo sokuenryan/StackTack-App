@@ -37,9 +37,9 @@ const Investments = () => {
   };
 
   return (
-    <div className='investments setup'>
+    <div className='investments content-setup'>
       <Sidebar />
-      <div className='investments-content'>
+      <div className='content'>
         <div className='tab-table'>
           <div className='tabs'>
             <div className="tab-btns">

@@ -77,26 +77,28 @@ const AddNewInvestments = () => {
     };
 
   return (
-    <div className='add-new-investments-wrapper'>
-        <div className='add-new-investments--create'>
-            <tbody className='info-table'>
-                <div className='info'>
-                    <th>Completed</th>
-                    <tr>{calculatePaidFraction()}</tr>
-                </div>
+    <div className='content-wrapper'>
+        <div className='content--create'>
+            <table>
+                <tbody className="progress">
+                    <tr>
+                        <th>Completed</th>
+                        <td>{calculatePaidFraction()}</td>
+                    </tr>
 
-                <div className='info'>
-                    <th>Active</th>
-                    <tr><p>{investmentsList.length - countPaidInvestments()}</p></tr>
-                </div>
+                    <tr>
+                        <th>Active</th>
+                        <td>{investmentsList.length - countPaidInvestments()}</td>
+                    </tr>
 
-                <div className='info'>
-                    <th>Progress</th>
-                    <tr>{calculatePaidPercentage()}%</tr>
-                </div>
-            </tbody>
+                    <tr>
+                        <th>Progress</th>
+                        <td>{calculatePaidPercentage()}%</td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <div className="add-new-investments">
+            <div className="content">
                 <h1>Add New Investment</h1>
                 <div className="submission-data">
                     <div className='submit--name-amount'>
@@ -128,9 +130,10 @@ const AddNewInvestments = () => {
                         </div>
                     </div>
                     <button 
+                        className='btn'
                         onClick={handleAddNewInvestment}
-                        style={{marginTop: '30px'}}>
-                            Add Investment
+                        >
+                        Submit
                     </button>
                 </div>
             </div>

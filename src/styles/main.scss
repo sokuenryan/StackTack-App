@@ -3,19 +3,32 @@ html, body {
     padding: 0;
   }
 
-@import "./index.css";
-@import "./dashboard.css";
-@import "./sidebar.css";
+@import "./banner.css";
+@import "./base.css";
 
-@import "./bills.css";
 @import "./calendar.css";
+@import "./content.css";
 
-@import "./investments.css";
-@import "./credit.css";
-
-@import "./display-info.css";
-@import "./submit-data.css";
-@import "./list-items.css";
 @import "./contributions.css";
 
-@import "./banner.css";
+@import "./existing-data.css";
+
+@import "./list-items.css";
+@import "./login.css";
+
+@import "./nav.css";
+
+@import "./progress.css";
+
+@import "./register.css";
+
+@import "./sidebar.css";
+@import "./submit-data.css";
+
+@import "./tab-table.css";
+
+
+
+
+
+

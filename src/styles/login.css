@@ -1,0 +1,135 @@
+.login {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 29px;
+  width: 370px;
+  height: 400px;
+}
+
+.login-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.login-title h2 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.login-title span {
+  color: hsl(var(--accent));
+}
+
+.login-title p {
+  font-size: 14px;
+}
+
+.login form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.login input {
+  height: 45px;
+  width: 300px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.login-form p {
+  margin: 15px;
+  font-size: 20px;
+}
+
+.login-btns {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btns button {
+  height: 40px;
+  width: 130px;
+  font-size: 12px;
+}
+
+.login-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  margin-left: 50px;
+}
+
+.login-switch p {
+  font-size: 17px;
+}
+
+.login-switch span {
+  color: hsl(var(--accent))
+}
+
+.login-switch h6 {
+  font-size: 14px;
+}
+
+/* Password styles */
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input {
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%; 
+}
+
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  top: 40%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="email"] {
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+}
+
+.btn span {
+  margin-right: 8px;
+}
