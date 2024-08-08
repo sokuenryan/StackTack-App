@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // Pages and Layouts
-import Dashboard, { dashboardAction, dashboardLoader } from "./pages/Dashboard";
+import Login from "./pages/Login";
 import Bills from "./pages/Bills";
 import Investments from "./pages/Investments";
 import Credit from "./pages/Credit";
@@ -14,8 +14,8 @@ import Main, { mainLoader } from "./layouts/Main";
 import { logoutAction } from "./actions/Logout";
 
 // Auth Context
-import { AuthProvider } from './authContext';
-import PrivateRoute from './privateRoute';
+import { AuthProvider } from './auth/authContext';
+import PrivateRoute from './auth/privateRoute';
 
 // Define the routes
 const router = createBrowserRouter([
@@ -27,9 +27,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <PrivateRoute element={Dashboard} />,
-        loader: dashboardLoader,
-        action: dashboardAction,
+        element: <PrivateRoute element={Login} />,
         errorElement: <Error />
       },
       {
