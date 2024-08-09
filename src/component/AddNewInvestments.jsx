@@ -13,12 +13,11 @@ const AddNewInvestments = () => {
     const [editInvestmentName, setEditInvestmentName] = useState('');
     const [editInvestmentAmount, setEditInvestmentAmount] = useState('');
 
-    // Storage //
+
     useEffect(() => {
         localStorage.setItem('investmentsList', JSON.stringify(investmentsList));
     }, [investmentsList]);
 
-    // CRUD //
     const  handleAddNewInvestment = () => {
         if (newInvestmentName && newInvestmentAmount) {
             const newInvestment = {
@@ -52,14 +51,14 @@ const AddNewInvestments = () => {
         setInvestmentsList(updatedInvestments);
       };
 
-    // checkbox //
+
     const togglePaid = (index) => {
         const updatedInvestments = [...investmentsList]
         updatedInvestments[index].paid = !updatedInvestments[index].paid;
         setInvestmentsList(updatedInvestments);
     };
 
-    // sidebar //
+
     const countPaidInvestments = () => {
         return investmentsList.filter(investment => investment.paid).length; 
     };

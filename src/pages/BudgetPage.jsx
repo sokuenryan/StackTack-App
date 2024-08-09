@@ -6,35 +6,35 @@ import { toast } from "react-toastify";
 
 // components
 import AddExpenseForm from "../component/AddExpenseForm";
-import BudgetItem from "../component/BudgetItem";
+import Item from "../component/Item";
 import Table from "../component/Table";
 
 // helpers
 import { createExpense, deleteItem, getAllMatchingItems } from "../helpers";
 
 // loader
-export async function budgetLoader({params}) {
-    const budget = await getAllMatchingItems({
-        category: "budgets",
+export async function Loader({params}) {
+    const  = await getAllMatchingItems({
+        category: "s",
         key: "id",
         value: params.id,
     })[0];
 
     const expenses = await getAllMatchingItems({
         category: "expenses",
-        key: "budgetId",
+        key: "Id",
         value: params.id,
     });
 
-    if(!budget) {
-        throw new Error("The budget you're trying to find doesn't exist.")
+    if(!) {
+        throw new Error("The  you're trying to find doesn't exist.")
     }
 
-    return { budget, expenses }
+    return { , expenses }
 }
 
 // action
-export async function budgetAction({ request }) {
+export async function Action({ request }) {
     const data = await request.formData();
     const { _action, ...values } = Object.fromEntries(data);
 
@@ -43,7 +43,7 @@ export async function budgetAction({ request }) {
             createExpense({
                 name: values.newExpense,
                 amount: values.newExpenseAmount,
-                budgetId: values.newExpenseBudget
+                Id: values.newExpense
             })
 
             return toast.success(`Expense ${values.newExpense} created!`)
@@ -65,28 +65,28 @@ export async function budgetAction({ request }) {
    }
 }
 
-const BudgetPage = () => {
-    const { budget, expenses } = useLoaderData();
+const Page = () => {
+    const { , expenses } = useLoaderData();
 
     return (
         <div className="grid-lg" 
         style={{
-            "--accent": budget.color,
+            "--accent": .color,
         }}>
             <h1 className="h2">
-                <span className="accent">{budget.name}</span> Overview 
+                <span className="accent">{.name}</span> Overview 
             </h1>
             <div className="flex-lg">
-                <BudgetItem budget={budget} showDelete={true} />
-                <AddExpenseForm budgets={[budget]} />
+                <Item ={} showDelete={true} />
+                <AddExpenseForm s={[]} />
             </div>
             {
                 expenses && expenses.length > 0 && (
                     <div className="grid-md">
                         <h2>
-                            <span className="accent">{budget.name}</span> Expenses
+                            <span className="accent">{.name}</span> Expenses
                         </h2>
-                        <Table expenses={expenses} showBudget={false} />
+                        <Table expenses={expenses} show={false} />
                     </div>
                 )
             }
@@ -94,4 +94,4 @@ const BudgetPage = () => {
     )
 };
 
-export default BudgetPage;
+export default Page;
