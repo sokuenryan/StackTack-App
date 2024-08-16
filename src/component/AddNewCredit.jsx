@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';;
+import React, { useState, useEffect } from 'react';;
 
 const AddNewCredit = () => {
     const [newCreditName, setNewCreditName] = useState('');
@@ -42,6 +42,7 @@ const AddNewCredit = () => {
     const handleDeleteCredit = (index) => {
         const creditToDelete = creditsList[index];
         localStorage.removeItem(`contribution-${creditToDelete.name}`);
+
         const updatedCredits = [...creditsList];
         updatedCredits.splice(index, 1);
         setCreditsList(updatedCredits);
@@ -111,6 +112,8 @@ const AddNewCredit = () => {
                             <input
                                 type='number'
                                 step="0.01"
+                                min='0'
+                                max='999'
                                 inputMode='decimal'
                                 name='creditAmount'
                                 placeholder='0.00'

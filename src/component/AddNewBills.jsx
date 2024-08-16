@@ -5,12 +5,10 @@ const AddNewBills = () => {
   const [newBillAmount, setNewBillAmount] = useState('');
   const [newBillWeek, setNewBillWeek] = useState('');
   const [newBillDate, setNewBillDate] = useState('');
-
   const [billsList, setBillsList] = useState(() => {
     const savedBills = localStorage.getItem('billsList');
     return savedBills ? JSON.parse(savedBills) : [];
   });
-
   const [editIndex, setEditIndex] = useState(null);
   const [editBillName, setEditBillName] = useState('');
   const [editBillAmount, setEditBillAmount] = useState('');
@@ -126,53 +124,49 @@ const AddNewBills = () => {
                     required
                   />
                 </div>
-
-              <div className="submit-amount">
-                <label htmlFor="billAmount">Amount</label>
-                <input
-                  type="number"
-                  id="billAmount"
-                  step="0.01"
-                  inputMode="decimal"
-                  name="billAmount"
-                  placeholder="$0.00"
-                  value={newBillAmount}
-                  onChange={(e) => setNewBillAmount(e.target.value)}
-                  required
-                />
-              </div>
-
+                <div className="submit-amount">
+                  <label htmlFor="billAmount">Amount</label>
+                  <input
+                    type="number"
+                    id="billAmount"
+                    step="0.01"
+                    inputMode="decimal"
+                    name="billAmount"
+                    placeholder="$0.00"
+                    value={newBillAmount}
+                    onChange={(e) => setNewBillAmount(e.target.value)}
+                    required
+                  />
+                </div>
               </div>
 
               <div className="submit--week-datedue">
-              <div className="submit-week">
-                <label htmlFor="billWeek">Week of Bill</label>
-                <select
-                  id="billWeek"
-                  value={newBillWeek}
-                  onChange={(e) => setNewBillWeek(e.target.value)}
-                >
-                  <option value="">Select Week</option>
-                  <option value="Week 1">Week 1</option>
-                  <option value="Week 2">Week 2</option>
-                  <option value="Week 3">Week 3</option>
-                  <option value="Week 4">Week 4</option>
-                </select>
-              </div>
+                <div className="submit-week">
+                  <label htmlFor="billWeek">Week of Bill</label>
+                  <select
+                    id="billWeek"
+                    value={newBillWeek}
+                    onChange={(e) => setNewBillWeek(e.target.value)}
+                  >
+                    <option value="">Select Week</option>
+                    <option value="Week 1">Week 1</option>
+                    <option value="Week 2">Week 2</option>
+                    <option value="Week 3">Week 3</option>
+                    <option value="Week 4">Week 4</option>
+                  </select>
+                </div>
 
-
-              <div className="submit-datedue">
-                <label htmlFor="billDate">Bill Date</label>
-                <input
-                  type="date"
-                  id="billDate"
-                  max="9999-12-31"
-                  value={newBillDate}
-                  onChange={(e) => setNewBillDate(e.target.value)}
-                  required
-                />
-              </div>
-
+                <div className="submit-datedue">
+                  <label htmlFor="billDate">Bill Date</label>
+                  <input
+                    type="date"
+                    id="billDate"
+                    max="9999-12-31"
+                    value={newBillDate}
+                    onChange={(e) => setNewBillDate(e.target.value)}
+                    required
+                  />
+                </div>
               </div>
               <button className="btn" onClick={handleAddNewBill}>Add Bill</button>
             </div>
@@ -195,6 +189,7 @@ const AddNewBills = () => {
                     onChange={(e) => setEditBillName(e.target.value)}
                     required
                   />
+
                   <input
                     className='list-items--amount'
                     type="number"
@@ -205,6 +200,7 @@ const AddNewBills = () => {
                     onChange={(e) => setEditBillAmount(e.target.value)}
                     required
                   />
+
                   <input
                     className='list-items--date'
                     type="date"
@@ -212,6 +208,7 @@ const AddNewBills = () => {
                     onChange={(e) => setEditBillDate(e.target.value)}
                     required
                   />
+
                   <select 
                       className='list-items--week-select'
                       id="weekSelect" 
@@ -225,10 +222,14 @@ const AddNewBills = () => {
                       <option value="Week 3">Week 3</option>
                       <option value="Week 4">Week 4</option>
                   </select>
+
                   <button className='save-btn' onClick={() => handleEditBill(index, editBillName, editBillAmount, editBillWeek, editBillDate)}>
                     Save
                   </button>
-                  <button className='cancel-btn' onClick={() => setEditIndex(null)}>Cancel</button>
+                  
+                  <button className='cancel-btn' onClick={() => setEditIndex(null)}>
+                    Cancel
+                  </button>
                 </>
               ) : (
                 <>

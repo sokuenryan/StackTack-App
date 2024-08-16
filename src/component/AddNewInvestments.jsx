@@ -1,18 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const AddNewInvestments = () => {
     const [newInvestmentName, setNewInvestmentName] = useState('');
     const [newInvestmentAmount, setNewInvestmentAmount] = useState('');
-    
     const [investmentsList, setInvestmentsList] = useState(() => {
         const savedInvestments = localStorage.getItem('investmentsList');
         return savedInvestments ? JSON.parse(savedInvestments) : [];
     });
-
     const [editIndex, setEditIndex] = useState(null);
     const [editInvestmentName, setEditInvestmentName] = useState('');
     const [editInvestmentAmount, setEditInvestmentAmount] = useState('');
-
 
     useEffect(() => {
         localStorage.setItem('investmentsList', JSON.stringify(investmentsList));
@@ -51,13 +48,11 @@ const AddNewInvestments = () => {
         setInvestmentsList(updatedInvestments);
       };
 
-
     const togglePaid = (index) => {
         const updatedInvestments = [...investmentsList]
         updatedInvestments[index].paid = !updatedInvestments[index].paid;
         setInvestmentsList(updatedInvestments);
     };
-
 
     const countPaidInvestments = () => {
         return investmentsList.filter(investment => investment.paid).length; 

@@ -204,3 +204,7 @@ Last given action of 8/7/2024
     - I altered some of the styling features of each page
     - Turned "add bill", "add investment", and "add credit" into a "submit" button instead. 
     - Added cybersecurity measures to the page using PrivateRoute combined with Firebase
+
+
+Last given action of 8/15/2024 
+    - restructured the file names and cleaned up the code 

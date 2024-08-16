@@ -1,27 +1,25 @@
 import React from 'react';
-// rrd imports
+import Main, { mainLoader } from "./layouts/Main";
+import { logoutAction } from "./actions/Logout";
 
-// library imports
+// library 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// Pages and Layouts
+// Pages 
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Bills from "./pages/Bills";
 import Investments from "./pages/Investments";
 import Credit from "./pages/Credit";
-import Register from "./pages/Register";
 import Error from "./pages/Error";
 
-import Main, { mainLoader } from "./layouts/Main";
-import { logoutAction } from "./actions/Logout";
-
-// Auth Context
+// Auth
 import { AuthProvider } from './auth/authContext';
 import PrivateRoute from './auth/privateRoute';
 
-// Define the routes
+
 const router = createBrowserRouter([
   {
     path: "/",

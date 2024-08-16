@@ -5,7 +5,6 @@ import Banner from './Banner';
 
 const ExistingCredit = () => {
   const [creditsList, setCreditsList] = useState([]);
-  const [notification, setNotification] = useState(null);
 
   useEffect(() => {
     const storedCredit = localStorage.getItem('creditsList');
