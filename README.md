@@ -13,6 +13,7 @@ Now you have to log into these apps every time you need to check a bill date.
 Why do that when I can just log into one app instead of every app just to check the due date?
 
 Welcome to StackTack!<br>My first app to make my life easier! 
+Hopefully other's too. Adulting is hard!
 
 # Monthly Bill Due Dates
 I moved apartments once and so I had to switch WiFi carriers. Usually if my bill is late by a day or so I get a warning. My new carrier gives me near $10 fee for late payment! 
