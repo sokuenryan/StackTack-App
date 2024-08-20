@@ -9,7 +9,8 @@ Now you have to log into these apps every time you need to check a bill date.
   - Your banking app
   - Your credit card apps
   - Your electric bill app
-  - Your wifi carrier app <br>
+  - Your wifi carrier app
+  
 Why do that when I can just log into one app instead of every app just to check the due date?
 
 Welcome to StackTack!<br>My first app to make my life easier! 
