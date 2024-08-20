@@ -21,7 +21,7 @@ I moved apartments once and so I had to switch WiFi carriers. Usually if my bill
 
 I have a whiteboard in my room that shows all my bills, I have them on my phone's notebook app, and I have a hardcopy calendar planner. As I was adding stuff to my Google Calendar I realized StackTack calendar could free up space, due to it's specfificity on bill tracking, it would also make it easier to remain organized. 
 
-I got to thinking...what else should StackTack do?
+So I got to thinking...what else SHOULD StackTack do?
 
 # Tracking Investments
 Got a new big purchase you are financing? Or maybe you want to hit a certain amount in your savings account, but either way, you can add it to the investment area of the app and even track you contributions towards it. 
