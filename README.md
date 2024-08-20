@@ -1,9 +1,9 @@
 # Why Did You Build StackTack?
 Ever seen something like this? <br>
 
-"You have been charged with $30 late payment fee" <br>
+"You have been charged with $30 late payment fee." <br>
 "You have 1 week to pay your electric bill before we shut off your electricity." <br>
-"You have 1 week til your premium free trial ends, to which your new bill will be $50.00/Month" <br>
+"You have 1 week til your premium free trial ends, to which your new bill will be $50.00/Month." <br>
 
 Now you have to log into these apps every time you need to check a bill date. 
   - Your banking app
