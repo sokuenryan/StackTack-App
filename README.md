@@ -7,9 +7,14 @@
 "You have 1 week til your premium free trial ends, to which your new bill will be $50.00/Month"
 
 Ever seen something like this? <br>
-Now imagine having to log into your bank app, your credit card apps, your electric bill app, your wifi app, and your phone app everytime to check a due date. Why do that when I can just build an app that stops me from logging into every app just to check the due date. 
+How imagine having to log into these apps every time you need to check a bill date. 
+  - Your banking app
+  - Your credit card apps
+  - your electric bill app
+  - your wifi carrier app <br>
+Why do that when I can just build an app that stops me from logging into every app just to check the due date. 
 
-Monthly Bill Due Dates
+# Monthly Bill Due Dates
 I moved apartments once and so I had to switch WIFI carriers. Usually if my bill is late by a day or so I get a warning. My new carrier gives me near $10 fee for late payment! 
 
 I have a whiteboard in my room that shows all my bills, I have them on my phone's notebook app, and I have a hardcopy calendar planner. As I was adding stuff to my Google Calendar I realized StackTack calendar could free up space, due to it's specfificity on bill tracking, it would also make it easier to remain organized. 
