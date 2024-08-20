@@ -22,7 +22,7 @@ I got to thinking...what else should StackTack do?
 
 # Tracking Investments
 Got a new big purchase you are financing? Or maybe you want to hit a certain amount in your savings account, but either way, you can add it to the investment area of the app and even track you contributions towards it. 
-(added a little popup message as well when you reach full payment ^_^) 
+I even added a little popup message as well when you reach full payment (^_^) 
 
 # Paying Credit on Time
 Oh boy. The dreaded credit score aspect of adulthood. Well, now it's easier as you can list out all your credit cards (hopefully you don't have too many) and all the credit amounts for both revolving credit and loans as well. 
