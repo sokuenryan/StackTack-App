@@ -14,7 +14,7 @@ Why do that when I can just log into one app instead of every app just to check 
 Welcome to StackTack! My first app to make my life easier! 
 
 # Monthly Bill Due Dates
-I moved apartments once and so I had to switch WIFI carriers. Usually if my bill is late by a day or so I get a warning. My new carrier gives me near $10 fee for late payment! 
+I moved apartments once and so I had to switch WiFi carriers. Usually if my bill is late by a day or so I get a warning. My new carrier gives me near $10 fee for late payment! 
 
 I have a whiteboard in my room that shows all my bills, I have them on my phone's notebook app, and I have a hardcopy calendar planner. As I was adding stuff to my Google Calendar I realized StackTack calendar could free up space, due to it's specfificity on bill tracking, it would also make it easier to remain organized. 
 
