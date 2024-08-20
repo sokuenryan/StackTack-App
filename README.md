@@ -6,8 +6,8 @@
 
 "You have 1 week til your premium free trial ends, to which your new bill will be $50.00/Month"
 
-Ever seen something like this?
-  Now imagine having to log into your bank app, your credit card apps, your electric bill app, your wifi app, and your phone app everytime to check a due date. Why do that when I can just build an app that stops me from logging into every app just to check the due date. 
+Ever seen something like this? <br>
+Now imagine having to log into your bank app, your credit card apps, your electric bill app, your wifi app, and your phone app everytime to check a due date. Why do that when I can just build an app that stops me from logging into every app just to check the due date. 
 
 Monthly Bill Due Dates
 I moved apartments once and so I had to switch WIFI carriers. Usually if my bill is late by a day or so I get a warning. My new carrier gives me near $10 fee for late payment! 
