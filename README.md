@@ -8,8 +8,8 @@ Ever seen something like this? <br>
 Now you have to log into these apps every time you need to check a bill date. 
   - Your banking app
   - Your credit card apps
-  - your electric bill app
-  - your wifi carrier app <br>
+  - Your electric bill app
+  - Your wifi carrier app <br>
 Why do that when I can just log into one app instead of every app just to check the due date?
 Welcome to StackTack! My first app to make my life easier! 
 
