@@ -10,7 +10,8 @@ Now you have to log into these apps every time you need to check a bill date.
   - Your credit card apps
   - your electric bill app
   - your wifi carrier app <br>
-Why do that when I can just build an app that stops me from logging into every app just to check the due date. 
+Why do that when I can just log into one app instead of every app just to check the due date?
+Welcome to StackTack! My first app to make my life easier! 
 
 # Monthly Bill Due Dates
 I moved apartments once and so I had to switch WIFI carriers. Usually if my bill is late by a day or so I get a warning. My new carrier gives me near $10 fee for late payment! 
