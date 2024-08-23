@@ -14,7 +14,7 @@ StackTack is a financial management application built with React.js. It helps us
   - Uses react-calendar.
   - All bill get printed to the designated tile per selected date.
 
-**Investment and Credit Tracker**
+**Investment and Credit Tracking and Contribution**
   - Create, read, udate and delete listed items
   - Add contribution amounts
   - banner limit feature when suprassing the initial amount placed
@@ -26,7 +26,7 @@ StackTack is a financial management application built with React.js. It helps us
    - Google Provider sign in option 
 --
 
-## Running this project locally
+## Running This Project Locally
 ***NOTE: This project was created with Vite so you will have to run it in order to work this app***
 
 **From the Repo
@@ -67,18 +67,18 @@ StackTack is a financial management application built with React.js. It helps us
     "eslint-plugin-react-refresh": "^0.4.6",
     "vite": "^5.2.0"
 
-## Upcoming Features
+## Planned Upcoming Features
 # Backend Work
 At the moment all user data gets saved to the local storage.<br>
 ### Note<br>
-***No data input areas are intended for basic info and not for the user create or for the system to generate any sensative or confidential information***
+***No data input areas are intended for basic info and not for the user create or for the system to generate any sensative or confidential information***<br>
 However, backend is needed so that muliple users ***can*** use the application on more than one browser 
 due to the fact that it's client-side only at the moment. The app is intended for personal use, but for 
 cleanliness and proficiency for the app a small storage working the non-complex data would make this app 
 both clean of duplication and feel more complete. 
 
 # Contributing
-We welcome contributions from the community! Here’s how you can get involved:
+### We welcome contributions from the community! Here’s how you can get involved:###
 
 1. Fork the Repository:
     - Click the "Fork" button on the top-right corner of this repository to create your own copy.
