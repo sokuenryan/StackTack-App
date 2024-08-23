@@ -1,8 +1,4 @@
 # StackTack
-<!-- Thin Line -->
-<hr>
-
-<!-- Thick Line -->
 <hr style="border: 3px solid black;">
 ## Overview
 StackTack is a financial management application built with React.js. It helps users effectively manage their finances bill tracking, monitoring due dates, and contribututions made to pay towards or pay down credit and investment goals. 
