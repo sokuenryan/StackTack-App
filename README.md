@@ -119,4 +119,4 @@ due to the fact that it's client-side only at the moment.<br>
     **[Issues](https://github.com/sokuenryan/StackTack-App/issues)** section of the repository.
   - **Documentation**: Contributions to improve documentation are also welcome!
 
-** Thank you for your interest in contributing to StackTack! **
+**Thank you for your interest in contributing to StackTack!**
