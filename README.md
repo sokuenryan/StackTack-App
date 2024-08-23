@@ -78,8 +78,8 @@ This app not only has helped me stay on time with credit due dates increasing my
 # Planned Upcoming Features
 ## Backend Work
 At the moment all user data gets saved to the local storage.<br>
-### Note<br>
-***All data input areas are intended for ***basic info only*** and **NOT** for the user create or the system to generate any sensative or confidential information***<br>
+### Note <br>
+***All data input areas are intended for ***basic info only*** and **NOT** for the user to create or the system to generate ANY sensative or confidential information***<br>
 However, backend is needed so that muliple users ***can*** use the application on more than one browser 
 due to the fact that it's client-side only at the moment. The app is intended for personal use, but for 
 cleanliness and proficiency for the app a small storage working the non-complex data would make this app 
