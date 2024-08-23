@@ -81,7 +81,7 @@ At the moment all user data gets saved to the local storage.<br>
 ### Note <br>
 ***All data input areas are intended for ***basic info only*** and **NOT** for the user to create or generate ANY sensative or confidential information***<br>
 However, backend is needed so that multiple users ***can*** use the application on more than one browser 
-due to the fact that it's client-side only at the moment.<br>
+due to the fact that it's client-side only at the moment and all their data can remain separate from other users.<br>
  
 ## Contributing
 ### Welcoming contributional help from the community! <br> Here’s how you can get involved: ###
