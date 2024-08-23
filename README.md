@@ -33,8 +33,7 @@ This app not only has helped me stay on time with credit due dates increasing my
    - Uses private routers run through Firebase Authentication system.
    - requires email and password registration.
    - Contains a Google Provider sign-in option from Firebase Auth. 
---
-
+---
 ## Running This Project Locally
 ***NOTE: This project was created with Vite so you will have to run it in order to work this app***
 
