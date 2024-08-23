@@ -108,16 +108,15 @@ Here’s how you can get involved:
 6. Push to Fork:
    - Push changes to your forked repo
    ```bash
-   git push origin feature/your -feature-name
+   git push origin feature/your-feature-name
 7. Create a Pull Request:
    - Go to the origional repo and open a pull request from your branch to the  `main` branch of the origional repository.
    - Include a clear description of the task you chose and a brief description of your changes or feature.
 8. Review and Feedback:
-  - The project maintainer will review your pull request and get back to you. 
+   - The project maintainer will review your pull request and get back to you. 
 
 ## Issues and Feedback 
-  - **Issues**: If you encounter any bugs or have suggestions for improvements, please don't hesitate to send it to me in the
-    **[Issues](https://github.com/sokuenryan/StackTack-App/issues)** section of the repository.
+  - **Issues**: If you encounter any bugs or have suggestions for improvements, please don't hesitate to send it to me in the **[Issues](https://github.com/sokuenryan/StackTack-App/issues)** section of the repository.
   - **Documentation**: Contributions to improve documentation are also welcome!
 
 **Thank you for your interest in contributing to StackTack!**
