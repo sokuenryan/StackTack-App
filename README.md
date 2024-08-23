@@ -1,6 +1,7 @@
 # Welcome to StackTack!!
 ## Overview
-StackTack is a financial management application built with React.js. It helps users effectively manage their finances bill tracking, monitoring due dates, and contribututions made to pay towards or pay down credit and investment goals. The app's inspiration came about as a showcase problem solving solution when I realized it would be much easier to log into one app instead of many when needing to check my financial due dates for: 
+StackTack is a financial management application built with React.js.<br>
+It helps users effectively manage their financial bill tracking, monitor due dates with easy and simple due dates, and contribututions made to pay towards or pay down credit and investment goals. The app's inspiration came about as a showcase problem solving solution when I realized it would be much easier to log into one app instead of many when needing to check my financial due dates for: 
 - Electric bills
 - Credit cards due dates
 - Phone bill
