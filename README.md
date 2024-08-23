@@ -7,7 +7,7 @@ It helps users effectively manage their financial bill tracking, monitor due dat
 The app's inspiration came about as a showcase for a problem solving solution when I realized it would be much easier to log into one app instead of many when needing to check my financial due dates.<br>
 When moving my financial apps to one area of my phone for ease of access I realized I had to sign into more than one. 
 
-## StackTack's Benefit To My Everyday Life
+## StackTack's Benefit to My Life
 This app not only has helped me stay on time with credit due dates increasing my credit, but also has become a synergetic tool when budgeting and calculating my finances for the week allowing me to easily see where I need to cut or contribute spending. 
 
 **For a full live view look at this app - check out StackTack at:**
