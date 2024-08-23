@@ -67,7 +67,7 @@ This app not only has helped me stay on time with credit due dates increasing my
     "react-toastify": "^10.0.5",
     "sass": "^1.77.4"
 
-## Dev Dependencies 
+## DevDependencies 
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
@@ -75,7 +75,7 @@ This app not only has helped me stay on time with credit due dates increasing my
     "eslint-plugin-react-refresh": "^0.4.6",
     "vite": "^5.2.0"
 
-## Planned Upcoming Features
+# Planned Upcoming Features
 ## Backend Work
 At the moment all user data gets saved to the local storage.<br>
 ### Note<br>
