@@ -1,12 +1,10 @@
 # StackTack
----
 ## Overview
 StackTack is a financial management application built with React.js. It helps users effectively manage their finances bill tracking, monitoring due dates, and contribututions made to pay towards or pay down credit and investment goals. 
 
 **LIVE VIEW** : [link to Netlify!] (http://www.netlify.com)
 
 ## Features
----
 **Bill Tracking**
   - Add, edit, and delete bills with ease.
   - Easy visualization of bills, amount, week they are due, and date due.
