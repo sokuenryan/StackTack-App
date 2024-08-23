@@ -15,7 +15,7 @@ This app not only has helped me stay on time with credit due dates increasing my
 
 ## Features
 **Bill Tracking**
-  - Add, edit, and delete bills with ease.
+  - Create, read, update, and delete bills with ease.
   - Easy visualization of bills, amount, week they are due, and date due.
   - View a summary of all outstanding and paid bills.
 
