@@ -56,7 +56,7 @@ This app not only has helped me stay on time with credit due dates increasing my
   3. Open Terminal and run 'npm install vite@latest'
   4. Run 'npm run dev' to start up the application.
 
-# Dependencies 
+## Dependencies 
     "@heroicons/react": "^2.1.3",
     "firebase": "^10.12.5",
     "react": "^18.2.0",
@@ -67,7 +67,7 @@ This app not only has helped me stay on time with credit due dates increasing my
     "react-toastify": "^10.0.5",
     "sass": "^1.77.4"
 
-# Dev Dependencies 
+## Dev Dependencies 
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
@@ -76,7 +76,7 @@ This app not only has helped me stay on time with credit due dates increasing my
     "vite": "^5.2.0"
 
 ## Planned Upcoming Features
-# Backend Work
+## Backend Work
 At the moment all user data gets saved to the local storage.<br>
 ### Note<br>
 ***No data input areas are intended for basic info and not for the user create or for the system to generate any sensative or confidential information***<br>
@@ -85,7 +85,7 @@ due to the fact that it's client-side only at the moment. The app is intended fo
 cleanliness and proficiency for the app a small storage working the non-complex data would make this app 
 both clean of duplication and feel more complete. 
 
-# Contributing
+## Contributing
 ### We welcome contributions from the community! Here’s how you can get involved:###
 
 1. Fork the Repository:
