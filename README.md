@@ -84,7 +84,7 @@ However, backend is needed so that multiple users ***can*** use the application 
 due to the fact that it's client-side only at the moment.<br>
  
 ## Contributing
-### Welcoming contributional help from the community! Here’s how you can get involved: ###
+### Welcoming contributional help from the community! <br> Here’s how you can get involved: ###
 
 1. Fork the Repository:
     - Click the "Fork" button on the top-right corner of this repository to create your own copy.
