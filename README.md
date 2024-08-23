@@ -115,7 +115,7 @@ due to the fact that it's client-side only at the moment.<br>
 9. - The project maintainer will review your pull request and get back to you shortly.
 ---
 ## Issues and Feedback 
-- **[Issues](https://github.com/sokuenryan/StackTack-App/issues)**: If you encounter any bugs or have suggestions for improvements, please open an issue in the Issues section of the repository.
-- **Documentation**: Contributions to improve documentation are also welcome!
+  - If you encounter any bugs or have suggestions for improvements, please open an issue in the **[Issues](https://github.com/sokuenryan/StackTack-App/issues)**section of the repository.
+  - **Documentation**: Contributions to improve documentation are also welcome!
 
 Thank you for your interest in contributing to StackTack!
