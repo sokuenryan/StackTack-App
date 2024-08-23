@@ -112,7 +112,7 @@ due to the fact that it's client-side only at the moment.<br>
    - Go to the origional repo and open a pull request from your branch to the  `main` branch of the origional repository.
    - Include a clear description of the task you chose and a brief description of your changes or feature.
 8. Review and Feedback:
-9. - The project maintainer will review your pull request and get back to you shortly.
+  - The project maintainer will review your pull request and get back to you shortly.
 ---
 ## Issues and Feedback 
   - If you encounter any bugs or have suggestions for improvements, please open an issue in the
