@@ -21,18 +21,18 @@ This app not only has helped me stay on time with credit due dates increasing my
 
 **Calendar Visual**
   - Uses react-calendar.
-  - All bill get printed to the designated tile per selected date.
+  - All bills get their name and amount printed to the designated tile per selected date by the user.
 
 **Investment and Credit Tracking and Contribution**
-  - Create, read, udate and delete listed items
+  - Create, read, update and delete listed items
   - Add contribution amounts
-  - banner limit feature when suprassing the initial amount placed
-  - Toastify congratulations feature when you complete your goal
+  - Banner feature pop up will appear when contributions suprass the initial credit or investment amount placed
+  - Congratulations feature will pop up when you complete your goal using Toastify
 
 **Authentication**
    - Uses private routers run through Firebase Authentication system.
-   - email and password registration
-   - Google Provider sign in option 
+   - requires email and password registration.
+   - Contains a Google Provider sign-in option from Firebase Auth. 
 --
 
 ## Running This Project Locally
