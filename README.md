@@ -92,7 +92,7 @@ Here’s how you can get involved:
 2.  Clone Your Fork:
     - Clone your forked repository to your local machine:
     ``` bash
-    git clone https://github.com/yourusername/StackTack-App.git
+    git clone https://github.com/sokuenryan/StackTack-App.git
     cd StackTack-App
 3. Create a Branch
    - Create a new branch for your changes:
