@@ -69,7 +69,8 @@ StackTack is a financial management application built with React.js. It helps us
 
 ## Upcoming Features
 # Backend Work
-At the moment all user data gets saved to the local storage.
+At the moment all user data gets saved to the local storage.<br>
+### Note<br>
 ***No data input areas are intended for basic info and not for the user create or for the system to generate any sensative or confidential information***
 However, backend is needed so that muliple users ***can*** use the application on more than one browser 
 due to the fact that it's client-side only at the moment. The app is intended for personal use, but for 
