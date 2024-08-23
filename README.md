@@ -113,7 +113,7 @@ Here’s how you can get involved:
    - Go to the origional repo and open a pull request from your branch to the  `main` branch of the origional repository.
    - Include a clear description of the task you chose and a brief description of your changes or feature.
 8. Review and Feedback:
-  - The project maintainer will review your pull request and get back to you shortly.
+  - The project maintainer will review your pull request and get back to you. 
 
 ## Issues and Feedback 
   - **Issues**: If you encounter any bugs or have suggestions for improvements, please don't hesitate to send it to me in the
