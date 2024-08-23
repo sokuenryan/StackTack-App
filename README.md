@@ -113,10 +113,10 @@ due to the fact that it's client-side only at the moment.<br>
    - Include a clear description of the task you chose and a brief description of your changes or feature.
 8. Review and Feedback:
   - The project maintainer will review your pull request and get back to you shortly.
----
+
 ## Issues and Feedback 
   - If you encounter any bugs or have suggestions for improvements, please send it to me in the
     **[Issues](https://github.com/sokuenryan/StackTack-App/issues)** section of the repository.
   - **Documentation**: Contributions to improve documentation are also welcome!
 
-Thank you for your interest in contributing to StackTack!
+** Thank you for your interest in contributing to StackTack! **
