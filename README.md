@@ -83,7 +83,7 @@ At the moment all user data gets saved to the local storage.<br>
 However, backend is needed so that multiple users ***can*** use the application on more than one browser 
 due to the fact that it's client-side only at the moment.<br>
  
-## Looking to Contributing?
+## Contributing
 ### Welcoming contributional help from the community! Here’s how you can get involved: ###
 
 1. Fork the Repository:
@@ -110,11 +110,11 @@ due to the fact that it's client-side only at the moment.<br>
    git push origin feature/your -feature-name
 7. Create a Pull Request:
    - Go to the origional repo and open a pull request from your branch to the  `main` branch of the origional repository.
-     - Include a clear description of the task you chose and a brief description of your changes or feature.
+   - Include a clear description of the task you chose and a brief description of your changes or feature.
 8. Review and Feedback:
-  - The project maintainer will review your pull request and get back to you shortly.
-**Additional Notes:**
-
+9. - The project maintainer will review your pull request and get back to you shortly.
+---
+## Issues and Feedback 
 - **[Issues](https://github.com/sokuenryan/StackTack-App/issues)**: If you encounter any bugs or have suggestions for improvements, please open an issue in the Issues section of the repository.
 - **Documentation**: Contributions to improve documentation are also welcome!
 
