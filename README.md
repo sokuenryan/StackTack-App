@@ -86,7 +86,7 @@ cleanliness and proficiency for the app a small storage working the non-complex 
 both clean of duplication and feel more complete. 
 
 ## Contributing
-### We welcome contributions from the community! Here’s how you can get involved:###
+### We welcome contributions from the community! Here’s how you can get involved: ###
 
 1. Fork the Repository:
     - Click the "Fork" button on the top-right corner of this repository to create your own copy.
