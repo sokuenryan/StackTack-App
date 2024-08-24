@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Vite
+.vite
+*.d.ts
+
+# Rollup
+*.rpt2_cache/
