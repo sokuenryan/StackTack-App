@@ -1,5 +1,5 @@
 import { Outlet, useLoaderData} from "react-router-dom";
-import Nav from "../component/Nav";
+import Nav from "../components/Nav";
 import { fetchData } from "../helpers";
 
 export function mainLoader() {
@@ -14,7 +14,7 @@ const Main = () => {
         <div className="layout">
             <Nav userName={userName} />
             <main>
-             <Outlet />
+                <Outlet />
             </main>
         </div>
     )

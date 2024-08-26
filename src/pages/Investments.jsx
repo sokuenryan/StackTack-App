@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Sidebar from '../component/Sidebar';
-import AddNewInvestments from '../component/AddNewInvestments';
-import ExistingInvestments from '../component/ExistingInvestments';
+import Sidebar from '../components/Sidebar';
+import AddNewInvestments from '../components/AddNewInvestments';
+import ExistingInvestments from '../components/ExistingInvestments';
 
 const Investments = () => {
   const [ActiveComponent, setActiveComponent] = useState('AddNewInvestments', 'ExistingInvestments');

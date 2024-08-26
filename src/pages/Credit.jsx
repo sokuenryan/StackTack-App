@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
-import Sidebar from "../component/Sidebar";
-import AddNewCredit from "../component/AddNewCredit";
-import ExistingCredit from "../component/ExistingCredit";
+import Sidebar from "../components/Sidebar";
+import AddNewCredit from "../components/AddNewCredit";
+import ExistingCredit from "../components/ExistingCredit";
 
 const Credit = () => {
   const [ActiveComponent, setActiveComponent] = useState('AddNewCredit');

@@ -19,7 +19,6 @@ import Error from "./pages/Error";
 import { AuthProvider } from './auth/authContext';
 import PrivateRoute from './auth/privateRoute';
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,11 +49,6 @@ const router = createBrowserRouter([
       {
         path: "credit",
         element: <PrivateRoute element={Credit } />,
-        errorElement: <Error />
-      },
-      {
-        path: "register",
-        element: <Register />,
         errorElement: <Error />
       },
       {

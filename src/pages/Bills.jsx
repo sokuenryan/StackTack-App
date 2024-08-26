@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Sidebar from '../component/Sidebar';
-import AddNewBills from '../component/AddNewBills';
-import Calendar from '../component/Calendar';
+import Sidebar from '../components/Sidebar';
+import AddNewBills from '../components/AddNewBills';
+import Calendar from '../components/Calendar';
 
 const Bills = () => {
   const [ActiveComponent, setActiveComponent] = useState('AddNewBills');
