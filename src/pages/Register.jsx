@@ -28,7 +28,7 @@ const Register = () => {
     };
 
     const handleLoginRedirect = () => {
-        navigate("/"); // Redirect to the login page
+        navigate("/"); 
     };
 
     return (

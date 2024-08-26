@@ -33,6 +33,11 @@ const router = createBrowserRouter([
         errorElement: <Error />
       },
       {
+        path: "register",
+        element: <PrivateRoute element={Register} />,
+        errorElement: <Error />
+      },
+      {
         path: "bills",
         element: <PrivateRoute element={Bills} />,
         errorElement: <Error />
