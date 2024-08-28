@@ -7,7 +7,7 @@ import { IoExitOutline } from 'react-icons/io5';
 const Nav = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const isAuthPage = location.pathname === '/' || location.pathname === '/register';
+    const isAuthPage = location.pathname === '/'
 
     const handleLogout = async () => {
         await fetch('/logout', { method: 'POST' });
