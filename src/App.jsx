@@ -5,7 +5,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 // Pages 
 import Login from "./pages/Login";
-import Register from "./pages/Register";
 import Bills from "./pages/Bills";
 import Investments from "./pages/Investments";
 import Credit from "./pages/Credit";
