@@ -1,6 +1,6 @@
 // Import necessary functions from Firebase SDKs
 import { initializeApp } from "firebase/app";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, onAuthStateChanged } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, set } from "firebase/database";
 
@@ -29,6 +29,9 @@ const db = getDatabase(app);
 
 // Initialize Analytics for Firebase (if needed)
 const analytics = getAnalytics(app);
+
+// Google provider
+const googleProvider = new GoogleAuthProvider();
 
 // Function to save data to Realtime Database
 function saveDataToDatabase(data) {
@@ -72,4 +75,4 @@ function saveDataFromLocalStorage() {
 // Call saveDataFromLocalStorage() when you want to move data from local storage
 // ... (Add your logic to call this function when needed)
 
-export { app, auth, db, analytics, saveDataFromLocalStorage, saveDataToDatabaseList };
+export { app, auth, db, analytics, googleProvider, saveDataFromLocalStorage, saveDataToDatabaseList };
