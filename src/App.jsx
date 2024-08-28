@@ -28,16 +28,6 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "register",
-    element: (
-      <>
-        <Nav />
-        <Register />
-      </>
-    ),
-    errorElement: <Error />,
-  },
-  {
     path: "bills",
     element: (
       <>
