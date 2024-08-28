@@ -110,10 +110,11 @@ When Finished:
         - Delete any unused code from the CSS files
         or any other files that have unused or excess 
         code.
+    status: Complete
 
     --CLEAN UP YOUR CODE--
         - Organize your code to have a fresher and cleaner look 
         - Organize files to make them easier to read and sort through 
-
+    status: Complete
 
 

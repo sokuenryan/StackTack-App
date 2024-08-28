@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserIcon } from "@heroicons/react/24/solid";
-import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { auth, googleProvider } from "../firebase/firebase-config";
-import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
+import { signInWithEmailAndPassword, } from "firebase/auth";
+import { auth } from "../firebase/firebase-config";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -11,21 +11,6 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
-
-    const handleGoogleLogin = async () => {
-        try {
-            const result = await signInWithPopup(auth, googleProvider);
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            const token = credential.accessToken;
-            const user = result.user;
-            console.log('User:', user);
-            console.log('Access Token:', token);
-            navigate("/bills");
-        } catch (error) {
-            console.error('Error during Google login:', error);
-            setError('Google login failed. Please try again.');
-        }
-    };
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -82,13 +67,6 @@ const Login = () => {
                         <button type="submit" className="btn btn--dark">
                             <span>Log In</span>
                             <UserIcon width={20} />
-                        </button>
-                        
-                        <p>-- or --</p>
-                        
-                        <button onClick={handleGoogleLogin} className="btn btn--dark">
-                            <span>Sign in with Google</span>
-                            <FaGoogle size={20} />
                         </button>
                     </div>
                     {error && <p className="error-message">{error}</p>}
