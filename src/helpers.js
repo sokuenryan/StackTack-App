@@ -1,8 +1,3 @@
-// local storage
-export const fetchData = (key) => {
-    return JSON.parse(localStorage.getItem(key));
-};
-
 // delete item from local storage
 export const deleteItem = ({key, id}) =>  {
     const existingData = fetchData(key);

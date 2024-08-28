@@ -1,8 +1,4 @@
 import React from 'react';
-import Main, { mainLoader } from "./layouts/Main";
-import { logoutAction } from "./actions/Logout";
-
-// library 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,6 +10,7 @@ import Bills from "./pages/Bills";
 import Investments from "./pages/Investments";
 import Credit from "./pages/Credit";
 import Error from "./pages/Error";
+import Nav from "./components/Nav"; 
 
 // Auth
 import { AuthProvider } from './auth/authContext';
@@ -22,40 +19,53 @@ import PrivateRoute from './auth/privateRoute';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main />,
-    loader: mainLoader,
+    element: (
+      <>
+        <Nav />
+        <Login />
+      </>
+    ),
     errorElement: <Error />,
-    children: [
-      {
-        index: true,
-        element: <PrivateRoute element={Login} />,
-        errorElement: <Error />
-      },
-      {
-        path: "register",
-        element: <PrivateRoute element={Register} />,
-        errorElement: <Error />
-      },
-      {
-        path: "bills",
-        element: <PrivateRoute element={Bills} />,
-        errorElement: <Error />
-      },
-      {
-        path: "investments",
-        element: <PrivateRoute element={Investments} />,
-        errorElement: <Error />
-      },
-      {
-        path: "credit",
-        element: <PrivateRoute element={Credit } />,
-        errorElement: <Error />
-      },
-      {
-        path: "logout",
-        action: logoutAction
-      }
-    ]
+  },
+  {
+    path: "register",
+    element: (
+      <>
+        <Nav />
+        <Register />
+      </>
+    ),
+    errorElement: <Error />,
+  },
+  {
+    path: "bills",
+    element: (
+      <>
+        <Nav />
+        <PrivateRoute element={Bills} />
+      </>
+    ),
+    errorElement: <Error />,
+  },
+  {
+    path: "investments",
+    element: (
+      <>
+        <Nav />
+        <PrivateRoute element={Investments} />
+      </>
+    ),
+    errorElement: <Error />,
+  },
+  {
+    path: "credit",
+    element: (
+      <>
+        <Nav />
+        <PrivateRoute element={Credit} />
+      </>
+    ),
+    errorElement: <Error />,
   },
 ]);
 
