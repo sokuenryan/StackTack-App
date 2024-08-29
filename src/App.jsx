@@ -14,6 +14,7 @@ import Nav from "./components/Nav";
 // Auth
 import { AuthProvider } from './auth/authContext';
 import PrivateRoute from './auth/privateRoute';
+import Register from './pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,16 @@ const router = createBrowserRouter([
       </>
     ),
     errorElement: <Error />,
+  },
+  {
+    path: "register",
+    element: (
+      <>
+        <Nav />
+        <Register/>
+      </>
+    ),
+    errorElement: <Error />
   },
   {
     path: "bills",

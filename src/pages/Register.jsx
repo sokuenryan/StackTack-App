@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { UserIcon, UserPlusIcon } from "@heroicons/react/24/solid";
-import { signInWithEmailAndPassword, } from "firebase/auth";
+import { UserPlusIcon } from "@heroicons/react/24/solid";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebase-config";
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { LuLogIn } from "react-icons/lu";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-const Login = () => {
+const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
@@ -19,32 +20,38 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await signInWithEmailAndPassword(auth, email, password);
+            await createUserWithEmailAndPassword(auth, email, password);
             navigate("/bills");
         } catch (err) {
             setError(err.message);
         }
     };
 
+    const handleLoginRedirect = () => {
+        navigate("/"); 
+    };
+
     return (
-        <div className="login">
-            <div className="login-content">
-                <div className="login-title">
-                    <h2>Welcome <span className="accent">Back!</span></h2>
-                    <p>The only app you need to check</p>
-                    <p>for important dates and progress!</p>
+        <div className="register">
+            <div className="register-content">
+                <div className="register-title">
+                    <div className="register-title--content">
+                        <h2>Take Control of <span className="accent">Your Money</span></h2>
+                        <p>Life's better when you know you're on track</p>
+                        <p>Let's get started!</p>
+                    </div>
                 </div>
 
-                <form onSubmit={handleSubmit} className="login-form">
-                    <input
+                <form onSubmit={handleSubmit} className="register-form">
+                    <input 
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        required
+                        required 
                         placeholder="Email"
                         aria-label="Your Email"
-                        autoComplete="email" />
-
+                        autoComplete="email"
+                    />
                     <div className="password-input-wrapper">
                         <input
                             type={showPassword ? 'text' : 'password'}
@@ -63,21 +70,24 @@ const Login = () => {
                         </button>
                     </div>
 
-                    <div className="login-btns">
+                    <div className="register-btns">
                         <button type="submit" className="btn btn--dark">
-                            <span>Log In</span>
-                            <UserIcon width={20} />
+                            <span>Create Account</span>
+                            <UserPlusIcon width={20} />
                         </button>
+
+                        <p> or </p>
+                        
+                        <button type="button" className="btn btn--dark" onClick={handleLoginRedirect}>
+                            <span>Login</span>
+                            <LuLogIn />
+                        </button>
+                        {error && <p className="error-message">{error}</p>}
                     </div>
-                    {error && <p className="error-message">{error}</p>}   
                 </form>
-                <div className="login-switch">
-                    <p>New to Stack<span>Tack</span>?</p>
-                    <h6><a href="/register">Create Account</a></h6>
-                </div>
             </div>
         </div>
     );
 };
 
-export default Login;
+export default Register;
