@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Nav />
-        <PrivateRoute element={Register} />
+        < Register />
       </>
     ),
     errorElement: <Error />

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { UserIcon, UserPlusIcon } from "@heroicons/react/24/solid";
+import { useNavigate, Link } from "react-router-dom";
+import { UserIcon } from "@heroicons/react/24/solid";
 import { signInWithEmailAndPassword, } from "firebase/auth";
 import { auth } from "../firebase/firebase-config";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
@@ -73,7 +73,9 @@ const Login = () => {
                 </form>
                 <div className="login-switch">
                     <p>New to Stack<span>Tack</span>?</p>
-                    <h6><a href="/register">Create Account</a></h6>
+                    <Link to="/register">
+                        <h6>Create Account</h6>
+                    </Link>
                 </div>
             </div>
         </div>

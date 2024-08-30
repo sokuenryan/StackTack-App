@@ -1,5 +1,5 @@
 // rrd imports
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -15,10 +15,6 @@ const Sidebar = () => {
                 <button>Credit</button>
             </Link>
         </div>
-
-    <div className="main-content">
-        <Outlet />
-    </div>
     </div>
   );
 };
