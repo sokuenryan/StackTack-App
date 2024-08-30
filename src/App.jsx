@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Nav />
-        <Login />
+        <Register />
       </>
     ),
     errorElement: <Error />,
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Nav />
-        <Register />
+        <Login />
       </>
     ),
     errorElement: <Error />
