@@ -11,7 +11,7 @@ When moving my financial apps to one area of my phone for ease of access I reali
 This app not only has helped me stay on time with credit due dates increasing my credit, but also has become a synergetic tool when budgeting and calculating my finances for the week allowing me to easily see where I need to cut or contribute spending. 
 
 **For a full live view look at this app - check out StackTack at:** <br>
-**LIVE VIEW**: [link to Netlify!] (stacktack.netlify.app) <br>
+**LIVE VIEW**: [link to Netlify!] (http://www.stacktack.netlify.app) <br>
 **STATUS**: [![Netlify Status](https://api.netlify.com/api/v1/badges/4b351a5f-26d3-46f2-990f-9090a6c062bc/deploy-status)](https://app.netlify.com/sites/stacktack/deploys) 
 
 ## Features
