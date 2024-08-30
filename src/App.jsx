@@ -22,17 +22,17 @@ const router = createBrowserRouter([
     element: (
       <>
         <Nav />
-        <Register />
+        <Login />
       </>
     ),
     errorElement: <Error />,
   },
   {
-    path: "login",
+    path: "Register",
     element: (
       <>
         <Nav />
-        <Login />
+        <Register />
       </>
     ),
     errorElement: <Error />
