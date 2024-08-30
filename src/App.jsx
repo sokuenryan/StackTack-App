@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "register",
+    path: "login",
     element: (
       <>
         <Nav />
