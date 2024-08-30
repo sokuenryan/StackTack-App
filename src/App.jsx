@@ -14,7 +14,7 @@ import Nav from "./components/Nav";
 // Auth
 import { AuthProvider } from './auth/authContext';
 import PrivateRoute from './auth/privateRoute';
-import Register from './pages/Register';
+import Register from './pages/Register.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Nav />
-        <Register/>
+        <Register />
       </>
     ),
     errorElement: <Error />
