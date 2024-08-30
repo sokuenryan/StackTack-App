@@ -12,7 +12,7 @@ This app not only has helped me stay on time with credit due dates increasing my
 
 **For a full live view look at this app - check out StackTack at:** <br>
 **LIVE VIEW**  :https://stacktack.netlify.app <br>
-Site Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/4b351a5f-26d3-46f2-990f-9090a6c062bc/deploy-status)](https://app.netlify.com/sites/stacktack/deploys) 
+**STATUS**  : [![Netlify Status](https://api.netlify.com/api/v1/badges/4b351a5f-26d3-46f2-990f-9090a6c062bc/deploy-status)](https://app.netlify.com/sites/stacktack/deploys) 
 
 ## Features
 **Bill Tracking**
