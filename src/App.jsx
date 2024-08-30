@@ -28,11 +28,11 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "Register",
+    path: "register",
     element: (
       <>
         <Nav />
-        <Register />
+        <PrivateRoute element={Register} />
       </>
     ),
     errorElement: <Error />
