@@ -37,7 +37,6 @@ body {
   color: hsl(var(--text));
 }
 
-
 /* links and buttons */
 :where(a, .btn) {
   --color: hsl(var(--text));
