@@ -35,7 +35,7 @@ This app not only has helped me stay on time with credit due dates increasing my
    - requires email and password registration.
 
 **Original Designs**
-![Alt text](src/assets/wireframes/StackTack--WireFrame-1.png)
+![Alt text](src/assets/wireframes/StackTackWireFrame--1.png)
 
 ---
 ## Running This Project Locally
