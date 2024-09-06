@@ -33,6 +33,10 @@ This app not only has helped me stay on time with credit due dates increasing my
 **Authentication**
    - Uses private routers run through Firebase Authentication system.
    - requires email and password registration.
+
+**Original Designs**
+![Alt text](src/assets/wireframes/StackTack--WireFrame-1.png)
+
 ---
 ## Running This Project Locally
 ***NOTE: This project was created with Vite so you will have to run it in order to work this app***
