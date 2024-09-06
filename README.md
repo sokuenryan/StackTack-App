@@ -87,7 +87,6 @@ For now **this** is the original set design for this app.
 ## Additional Auth Provider
 Will contains a Google Provider sign-in option from Firebase Auth0
 
-
 ## Backend Work
 At the moment all user data gets saved to the local storage.<br>
 ### Note <br>
@@ -132,3 +131,7 @@ Here’s how you can get involved:
   - **Documentation**: Contributions to improve documentation are also welcome!
 
 **Thank you for your interest in contributing to StackTack!**
+**Check out the feature below to see all of the newest additions added to the project!!**
+
+# New Additions
+![Alt text](src/assets/wireframes/StackTack--WireFrame-4(mobile).png)
