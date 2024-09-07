@@ -33,6 +33,14 @@ This app not only has helped me stay on time with credit due dates increasing my
 **Authentication**
    - Uses private routers run through Firebase Authentication system.
    - requires email and password registration.
+
+##Original Designs
+**As you can see StackTack origional skeletory design matches quite close to the final product. 
+The only difference was that I was going to make it universal with more than one currency. 
+There is still thought on making this more universal and perhaps even designed eventually for corporate use. 
+For now **this** is the original set design for this app. 
+![Alt text](src/assets/wireframes/StackTackWireFrame--1.png)
+
 ---
 ## Running This Project Locally
 ***NOTE: This project was created with Vite so you will have to run it in order to work this app***
@@ -123,3 +131,7 @@ Here’s how you can get involved:
   - **Documentation**: Contributions to improve documentation are also welcome!
 
 **Thank you for your interest in contributing to StackTack!**
+**Check out the feature below to see all of the newest additions added to the project!!**
+
+# New Additions
+![Alt text](src/assets/wireframes/StackTack--WireFrame-4(mobile).png)
