@@ -25,7 +25,7 @@ const Nav = () => {
                 {
                     !isAuthPage && (
                         <button
-                            className="btn btn--warning"
+                            className="logout btn btn--warning"
                             onClick={handleLogout}
                             aria-label="logout"
                         >

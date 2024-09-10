@@ -1,9 +1,6 @@
 nav {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1245px;
-    margin: 10px 0px 15px 20px;
   }
 
 
@@ -17,6 +14,8 @@ nav {
     border: 3px solid hsl(var(--accent));
     border-radius: 7px;
     background-color: rgb(244, 244, 244);
+    height: 50px;
+    margin: 10px;
   }
   
   nav h3 {
@@ -35,31 +34,8 @@ nav {
   }
 
 /* Right Buttons */
-  .nav-btns {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-right: 10px;
-  }
-  
-  .nav form {
-    display: flex;
-    gap: 20px;
+.logout {
     height: 50px;
-    justify-content: right;
-  }
-
-  .nav-btns .btn {
-    width: 180px;
-    padding: 8px 5px 8px 8px;
-  }
-
-  .logout-btn {
-    width: 300px;
-  }
-
-  @media screen and (max-width: 525px) {
-    nav a span {
-      display: none;
-    }
-  }
+    margin: 10px;
+    width: 120px;
+ }

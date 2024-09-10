@@ -1,5 +1,6 @@
 .progress {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     height: 30px;
     width: 150px;
 }

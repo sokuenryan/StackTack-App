@@ -35,6 +35,7 @@ body {
   font-synthesis: none;
   background-color: hsl(var(--bkg));
   color: hsl(var(--text));
+  overflow-x: hidden;
 }
 
 /* links and buttons */

@@ -85,7 +85,7 @@ const AddNewBills = () => {
 
   return (
     <div className="content-wrapper">
-      <div className="content--create">
+      <div className="content">
         <table>
           <tbody className="progress">
             <tr>
@@ -105,7 +105,7 @@ const AddNewBills = () => {
           </tbody>
         </table>
 
-        <div className='content'>
+        <div className="content--submission">
           <h1>Add New Bill</h1>
           
           <div className="submission-data">

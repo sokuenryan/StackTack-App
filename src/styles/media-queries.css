@@ -1,0 +1,96 @@
+@media (max-width: 960px) {
+    .sidebar-content .sidebar {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-setup {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        margin: 0;
+    }
+
+    .content-wrapper {
+        width: 100vw;
+    }
+
+    .content--create {
+        display: flex;
+        flex-direction: column;
+    }
+
+    table {
+        width: 100%;
+        height: fit-content;
+    }
+
+    table .progress {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: fit-content;
+    }
+
+    table .progress tr {
+        width: 100%;
+    }
+    
+    .content .tab-table {
+        margin: 0;
+    }
+
+    .content .content--submission{
+        margin: 0;
+    }
+
+    .submission-data
+    .submission-data-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .submission-data-content
+    .submit--name-amount input {
+        width: 300px;
+    }
+
+    .submission-data-content
+    .submit--week-datedue input {
+        width: 300px;
+    }
+
+    
+    .submit--week-datedue
+    .submit-week select {
+        width: 300px;
+        margin: 0;
+    }
+
+    .submission-data-content 
+    .submit--name-amount {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+    }
+
+    .submission-data-content .submit--week-datedue  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        width: 100%;
+    }
+}
