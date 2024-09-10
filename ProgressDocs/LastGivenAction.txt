@@ -208,3 +208,7 @@ Last given action of 8/7/2024
 
 Last given action of 8/15/2024 
     - restructured the file names and cleaned up the code 
+
+Last given action of 9/9/2024
+    - Add media-quieres. Pretty much at completion. just need the "contribution" section
+    to be fixed. 
