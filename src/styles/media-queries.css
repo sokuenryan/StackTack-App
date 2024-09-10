@@ -1,4 +1,9 @@
 @media (max-width: 960px) {
+/* content */
+    .content-wrapper {
+        width: 100%;
+    }
+    
     .content-setup {
         display: flex;
         flex-direction: column;
@@ -12,7 +17,8 @@
         justify-content: center;
         align-items: center;
     }
-    .sidebar a {
+
+    .content-setup .sidebar a {
         flex: 1 1 30%; 
         max-width: 150px; 
         box-sizing: border-box; 
@@ -26,18 +32,78 @@
         margin: 0;
     }
 
-    .content-wrapper {
-        width: 100%;
-    }
-
-    .content--create {
-        display: flex;
-        flex-direction: column;
-    }
-
     .content .tab-table {
         margin: 0;
     }
+
+    .content .content--submission {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .content--submission .submission-data {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+/* submission-data */
+    .submission-data
+    .submission-data-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .submission-data-content 
+    .submit--name-amount {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+    }
+
+    .submission-data-content 
+    .submit--week-datedue  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        width: 100%;
+    }
+
+    .submission-data-content
+    .submit--name-amount input {
+        width: 300px;
+    }
+
+    .submission-data-content
+    .submit--week-datedue input {
+        width: 300px;
+    }
+
+    .submit--name-amount
+    .submit-name {
+        align-items: center;
+    }
+
+    .submission-data-content
+    .submit-amount {
+        align-items: center;
+    }
+
+    .submit--week-datedue
+    .submit-week select {
+        width: 300px;
+        margin: 0;
+    }
+
+/* table */
     table {
         width: 100%;
         height: fit-content;
@@ -53,72 +119,8 @@
     table .progress tr {
         width: 100%;
     }
-    
-    .content .content--submission {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        margin: 0;
-    }
 
-    .content--submission .submission-data {
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    .submission-data
-    .submission-data-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    .submit--name-amount
-    .submit-name {
-        align-items: center;
-    }
-    .submission-data-content
-    .submit--name-amount input {
-        width: 300px;
-    }
-
-    .submission-data-content
-    .submit-amount {
-        align-items: center;
-    }
-
-    .submission-data-content
-    .submit--week-datedue input {
-        width: 300px;
-    }
-
-    
-    .submit--week-datedue
-    .submit-week select {
-        width: 300px;
-        margin: 0;
-    }
-
-    .submission-data-content 
-    .submit--name-amount {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3px;
-    }
-
-    .submission-data-content .submit--week-datedue  {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3px;
-        width: 100%;
-    }
-
+/* list-items */
     .list-items {
         display: flex;
         width: 100%;

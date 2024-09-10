@@ -39,7 +39,7 @@ const Bills = () => {
   return (
     <div className='bills content-setup'>
       <Sidebar />
-      <div className='content'>
+      <div className='page-content'>
         <div className='tab-table'>
           <div className='tabs'>
             <div className='tab-btns'>

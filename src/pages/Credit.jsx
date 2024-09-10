@@ -39,7 +39,7 @@ const Credit = () => {
   return (
     <div className='credit content-setup'>
       <Sidebar />
-      <div className="content">
+      <div className="page-content">
         <div className='tab-table'>
           <div className='tabs'>
             <div className="tab-btns">
