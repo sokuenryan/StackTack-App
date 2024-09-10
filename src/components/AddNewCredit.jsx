@@ -94,41 +94,43 @@ const AddNewCredit = () => {
 
             <div className='content--submission'>
                 <h1>Add New Credit </h1>
-                <div className="submission-data-content">
-                    <div className='submit--name-amount'>
-                        <div className='submit-name'>
-                            <label htmlFor='creditName'>Credit Name</label>
-                            <input 
-                                type='text'
-                                placeholder='Enter Credit Name'
-                                maxLength={25}
-                                value={newCreditName}
-                                onChange={(e) => setNewCreditName(e.target.value)}
-                                required
-                            />
+                <div className="submission-data">
+                    <div className="submission-data-content">
+                        <div className='submit--name-amount'>
+                            <div className='submit-name'>
+                                <label htmlFor='creditName'>Credit Name</label>
+                                <input 
+                                    type='text'
+                                    placeholder='Enter Credit Name'
+                                    maxLength={25}
+                                    value={newCreditName}
+                                    onChange={(e) => setNewCreditName(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className='submit-amount'>
+                                <label htmlFor='creditAmount'>Amount</label>
+                                <input
+                                    type='number'
+                                    step="0.01"
+                                    min='0'
+                                    max='999'
+                                    inputMode='decimal'
+                                    name='creditAmount'
+                                    placeholder='0.00'
+                                    value={newCreditAmount}
+                                    onChange={(e) => setNewCreditAmount(e.target.value)}
+                                    required
+                                />
+                            </div>
                         </div>
-                        <div className='submit-amount'>
-                            <label htmlFor='creditAmount'>Amount</label>
-                            <input
-                                type='number'
-                                step="0.01"
-                                min='0'
-                                max='999'
-                                inputMode='decimal'
-                                name='creditAmount'
-                                placeholder='0.00'
-                                value={newCreditAmount}
-                                onChange={(e) => setNewCreditAmount(e.target.value)}
-                                required
-                            />
-                        </div>
+                        <button
+                            className='btn' 
+                            onClick={handleAddNewCredit}
+                        >
+                            Submit
+                        </button>
                     </div>
-                    <button
-                        className='btn' 
-                        onClick={handleAddNewCredit}
-                    >
-                        Submit
-                    </button>
                 </div>
             </div>
         </div>

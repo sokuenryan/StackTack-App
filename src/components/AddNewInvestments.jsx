@@ -94,41 +94,38 @@ const AddNewInvestments = () => {
 
             <div className="content--submission">
                 <h1>Add New Investment</h1>
-                <div className="submission-data-content">
-                    <div className='submit--name-amount'>
-                        <div className='submit-name'>
-                            <label htmlFor='investmentName'>Investment Name</label>
-                            <input
-                                type='text'
-                                placeholder='Enter Investment Name'
-                                maxLength={25}
-                                value={newInvestmentName}
-                                onChange={(e) => setNewInvestmentName(e.target.value)}
-                                required
-                            />
+                <div className="submission-data">
+                    <div className="submission-data-content">
+                        <div className='submit--name-amount'>
+                            <div className='submit-name'>
+                                <label htmlFor='investmentName'>Investment Name</label>
+                                <input
+                                    type='text'
+                                    placeholder='Enter Investment Name'
+                                    maxLength={25}
+                                    value={newInvestmentName}
+                                    onChange={(e) => setNewInvestmentName(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className='submit-amount'>
+                                <label htmlFor='investmentAmount'>Amount</label>
+                                <input
+                                    type='number'
+                                    step='0.01'
+                                    min='0'
+                                    max='999'
+                                    inputMode='decimal'
+                                    name='investmentAmount'
+                                    placeholder='0.00'
+                                    value={newInvestmentAmount}
+                                    onChange={(e) => setNewInvestmentAmount(e.target.value)}
+                                    required
+                                />
+                            </div>
                         </div>
-                        <div className='submit-amount'>
-                            <label htmlFor='investmentAmount'>Amount</label>
-                            <input
-                                type='number'
-                                step='0.01'
-                                min='0'
-                                max='999'
-                                inputMode='decimal'
-                                name='investmentAmount'
-                                placeholder='0.00'
-                                value={newInvestmentAmount}
-                                onChange={(e) => setNewInvestmentAmount(e.target.value)}
-                                required
-                            />
-                        </div>
+                        <button className='btn' onClick={handleAddNewInvestment}>Submit</button>
                     </div>
-                    <button 
-                        className='btn'
-                        onClick={handleAddNewInvestment}
-                        >
-                        Submit
-                    </button>
                 </div>
             </div>
         </div>

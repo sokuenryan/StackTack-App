@@ -14,7 +14,7 @@
     }
     .sidebar a {
         flex: 1 1 30%; 
-        max-width: 191px; 
+        max-width: 150px; 
         box-sizing: border-box; 
     }
 
@@ -54,7 +54,11 @@
         width: 100%;
     }
     
-    .content .content--submission{
+    .content .content--submission {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
         margin: 0;
     }
 
@@ -73,9 +77,18 @@
         width: 100%;
     }
 
+    .submit--name-amount
+    .submit-name {
+        align-items: center;
+    }
     .submission-data-content
     .submit--name-amount input {
         width: 300px;
+    }
+
+    .submission-data-content
+    .submit-amount {
+        align-items: center;
     }
 
     .submission-data-content
@@ -120,8 +133,9 @@
     }
 
     .list-items ul li .list-items-info {
-        flex-wrap: wrap;
-        gap: 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
     }
 
     .list-items ul li .list-items-modifiers {
