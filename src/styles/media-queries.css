@@ -1,4 +1,19 @@
 @media (max-width: 960px) {
+/* navbar */
+    .nav {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+/* page-content */
+    .page-content .tab-table {
+        margin: 0;
+    }
+
+    .page-content .tab-table .tab-btns button {
+        height: 50px;
+    }
+
 /* content */
     .content-wrapper {
         width: 100%;
@@ -14,6 +29,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
+        height: 50%;
         justify-content: center;
         align-items: center;
     }
@@ -29,10 +45,6 @@
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        margin: 0;
-    }
-
-    .content .tab-table {
         margin: 0;
     }
 
@@ -61,11 +73,15 @@
     }
 
     .submission-data-content 
-    .submit--name-amount {
+    .submit--name-amount
+    {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 3px;
+        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .submission-data-content 
@@ -75,6 +91,9 @@
         align-items: center;
         gap: 3px;
         width: 100%;
+        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .submission-data-content
@@ -112,13 +131,14 @@
     table .progress {
         display: flex;
         flex-direction: row;
-        width: 100%;
         height: fit-content;
+        width: 100%;
     }
 
     table .progress tr {
         width: 100%;
     }
+
 
 /* list-items */
     .list-items {
@@ -138,10 +158,77 @@
         display: flex;
         justify-content: center;
         gap: 10px;
+        width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
     }
 
     .list-items ul li .list-items-modifiers {
-        width: 100%;
         justify-content: center;
+        width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+/* existing data */
+    .existing-data--name-amount {
+        flex-direction: column;
+    }
+
+    .existing-data--name-amount
+    .existing-data-name { 
+        width: 100%;
+    }
+
+    .existing-data--name-amount
+    .existing-data-amount {
+        width: 100%;
+    }
+
+    .existing-data li {
+        height: auto;
+    }
+
+    .existing-data
+    .contribution {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .contribution
+    .contribution-btns-wrapper {
+        justify-content: center;
+    }
+
+    .contribution
+    .contribute-btns-wrapper button {
+        flex: 1 1 30%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+}
+
+@media (max-width: 444px) {
+    .contribution
+    .contribute-btns-wrapper {
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
+
+    .contribution
+    .contribution-amount,
+    .edit-contribution {
+        flex-direction: column;
+    }
+
+    .contribution
+    .contribution-amount button {
+        margin-right: 0px;
+    }
+    .contribution
+    .edit-contribution button {
+        margin-right: 0px;
     }
 }
