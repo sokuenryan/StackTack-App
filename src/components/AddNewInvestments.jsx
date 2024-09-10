@@ -72,7 +72,7 @@ const AddNewInvestments = () => {
 
   return (
     <div className='content-wrapper'>
-        <div className='content--create'>
+        <div className='content'>
             <table>
                 <tbody className="progress">
                     <tr>
@@ -92,9 +92,9 @@ const AddNewInvestments = () => {
                 </tbody>
             </table>
 
-            <div className="content">
+            <div className="content--submission">
                 <h1>Add New Investment</h1>
-                <div className="submission-data">
+                <div className="submission-data-content">
                     <div className='submit--name-amount'>
                         <div className='submit-name'>
                             <label htmlFor='investmentName'>Investment Name</label>

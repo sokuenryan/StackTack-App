@@ -1,27 +1,33 @@
 @media (max-width: 960px) {
-    .sidebar-content .sidebar {
-        display: flex;
-        flex-direction: row;
-        width: 100vw;
-        justify-content: center;
-        align-items: center;
-    }
-
     .content-setup {
         display: flex;
         flex-direction: column;
     }
 
-    .content {
+    .content-setup .sidebar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .sidebar a {
+        flex: 1 1 30%; 
+        max-width: 191px; 
+        box-sizing: border-box; 
+    }
+
+    .content-setup .content {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 100vw;
+        width: 100%;
         margin: 0;
     }
 
     .content-wrapper {
-        width: 100vw;
+        width: 100%;
     }
 
     .content--create {
@@ -29,6 +35,9 @@
         flex-direction: column;
     }
 
+    .content .tab-table {
+        margin: 0;
+    }
     table {
         width: 100%;
         height: fit-content;
@@ -45,12 +54,13 @@
         width: 100%;
     }
     
-    .content .tab-table {
+    .content .content--submission{
         margin: 0;
     }
 
-    .content .content--submission{
-        margin: 0;
+    .content--submission .submission-data {
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     .submission-data
@@ -59,6 +69,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     .submission-data-content
@@ -92,5 +104,28 @@
         align-items: center;
         gap: 3px;
         width: 100%;
+    }
+
+    .list-items {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list-items ul li {
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+
+    .list-items ul li .list-items-info {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .list-items ul li .list-items-modifiers {
+        width: 100%;
+        justify-content: center;
     }
 }

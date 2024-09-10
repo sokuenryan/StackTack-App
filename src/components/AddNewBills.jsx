@@ -107,7 +107,6 @@ const AddNewBills = () => {
 
         <div className="content--submission">
           <h1>Add New Bill</h1>
-          
           <div className="submission-data">
             <div className="submission-data-content">
               <div className="submit--name-amount">
