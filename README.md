@@ -1,3 +1,4 @@
+![Ai-img-header](src/assets/images/ai-photo.png)
 # Welcome to StackTack!!
 ## Overview
 StackTack is a financial management application built with React.js.<br>
